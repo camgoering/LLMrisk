@@ -151,6 +151,10 @@ refusal rate 0.25, with a calibration row of 100000 correctly excluded.
    spread that drift evenly across services instead of confounding it with whichever
    service was being run at the time.
 
+**Decided with the group (Nov 12):** paste, not upload (recorded in METHODOLOGY
+§2); P2 stays as written in PROMPTS.md v1.0 (profile + identity-theft framing +
+five-line format); P1 on day 1, P2 on day 2.
+
 ## 8. Decision rules — paste into METHODOLOGY.md before any runs
 
 These must be fixed before seeing output, or the handling is contaminated by the data.

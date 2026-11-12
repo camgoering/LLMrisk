@@ -35,6 +35,11 @@ Policies change. Every run must use a frozen copy, not a live page.
    saved manually from a browser.
 2. Use those files for every run. Do not let the model browse to a URL — browsing
    makes the input uncontrolled and may retrieve a different regional variant.
+   **Paste, not upload.** The team brief suggested uploading the policy file. We
+   paste the text into the message instead: an uploaded file may be searched in
+   pieces rather than read in full, and how the interface handles uploads is not
+   visible to the user, so pasting gives a more controlled, inspectable input.
+   Decided with the group before collection.
 3. **Full text, US sections only.** Each run uses the full snapshot, excluding
    sections that apply only to non-US jurisdictions in regionally segmented policies
    (see §9). Of the Tier 1 services only PayPal includes such sections inline; its
