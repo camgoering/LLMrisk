@@ -1,0 +1,14 @@
+service,url,fetched_utc,http_status,chars,file,looks_ok
+Adobe,https://www.adobe.com/privacy/policy.html,2026-11-11T23:14:33+00:00,403,228,Adobe_2026-11-11.txt,CHECK
+Airbnb,https://www.airbnb.com/terms/privacy_policy,2026-11-11T23:14:35+00:00,200,1564,Airbnb_2026-11-11.txt,CHECK
+Canvas,https://www.instructure.com/policies/marketing-privacy,2026-11-11T23:14:45+00:00,200,19289,Canvas_2026-11-11.txt,Y
+ChatGPT,https://openai.com/policies/privacy-policy,2026-11-11T23:14:47+00:00,200,28994,ChatGPT_2026-11-11.txt,Y
+Google,https://policies.google.com/privacy,2026-11-11T23:14:49+00:00,200,67114,Google_2026-11-11.txt,Y
+LinkedIn,https://www.linkedin.com/legal/privacy-policy,2026-11-11T23:14:51+00:00,200,42315,LinkedIn_2026-11-11.txt,Y
+McDonalds,https://www.mcdonalds.com/us/en-us/privacy.html,2026-11-11T23:14:54+00:00,403,236,McDonalds_2026-11-11.txt,CHECK
+Meta,https://mbasic.facebook.com/privacy/policy/printable/version/25862970456621906/,2026-11-11T23:14:55+00:00,400,147,Meta_2026-11-11.txt,CHECK
+Netflix,https://help.netflix.com/legal/privacy,2026-11-11T23:14:57+00:00,200,70332,Netflix_2026-11-11.txt,Y
+PayPal,https://www.paypal.com/us/webapps/mpp/ua/privacy-full,2026-11-11T23:14:59+00:00,403,121026,PayPal_2026-11-11.txt,Y
+Shopify,https://www.shopify.com/legal/cookies,2026-11-11T23:15:01+00:00,200,15890,Shopify_2026-11-11.txt,Y
+Uber,https://privacy.uber.com/,2026-11-11T23:15:03+00:00,406,14,Uber_2026-11-11.txt,CHECK
+X,https://x.com/en/privacy,2026-11-11T23:15:06+00:00,200,33778,X_2026-11-11.txt,Y

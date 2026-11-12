@@ -1,0 +1,13 @@
+# Adobe
+# source: https://www.adobe.com/privacy/policy.html
+# fetched: 2026-11-11T23:14:33+00:00
+
+Access Denied
+
+Access Denied
+
+You don't have permission to access "http://www.adobe.com/privacy/policy.html" on this server.
+
+Reference #18.bc4d6168.1794438873.dc92011
+
+https://errors.edgesuite.net/18.bc4d6168.1794438873.dc92011
