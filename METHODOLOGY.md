@@ -21,6 +21,9 @@ variation therefore reflects whatever default sampling the provider applies, whi
 is also what a real user experiences. We treat this as ecologically appropriate and
 report it as a limitation (§7).
 
+Account settings for the whole collection period: Memory off, "Reference chat
+history" off, custom instructions blank (or use Temporary Chat for every run).
+
 ## 2. Policy snapshots
 
 Policies change. Every run must use a frozen copy, not a live page.
@@ -65,6 +68,12 @@ All profiles are **synthetic**, set to published US averages. Values and sources
 live in the `Profiles` sheet of `data/llm_run_log.xlsx` and come from Jules's source
 research — fill them there, not here, so there is one authority for each figure.
 
+US_AVG as used (sources in the Profiles sheet): income $69,847 (SSA National
+Average Wage Index, 2024); credit tier Good (average FICO 714, March 2026; Good =
+670–739); available credit $35,687 (Experian average total card limit, June 2026);
+savings $8,000 (Federal Reserve SCF 2022, median transaction-account balance). The
+team's calculation must use the same values for the comparison to hold.
+
 No real participant data is ever sent to the model. This is deliberate: the survey
 promises anonymity, and transmitting participant financial details to a third-party
 service would break that promise. State this explicitly in the paper's ethics
@@ -103,7 +112,11 @@ For every single run:
    `prompts/PROMPTS.md`, the Profiles sheet and the policy snapshot), select all,
    copy, and paste it as one message. The file is the prompt verbatim with the
    placeholders and policy text already filled in, so nothing is retyped.
-3. Check that web search / browsing is off for the chat.
+3. Use a **Temporary Chat** (or have Memory, "Reference chat history" and custom
+   instructions all switched off for the whole collection period), so no saved
+   context from earlier runs or other conversations reaches the model. Do not
+   enable web search. If a response cites web sources anyway, note `searched` in
+   Notes.
 4. Send. **Take the first response only.** Never regenerate, never follow up, never
    nudge toward a number.
 5. Record the result in `data/llm_run_log.xlsx` → `Run Log`, including `Round` and

@@ -17,6 +17,7 @@ team's own risk calculation.
 | `analyze.py` | Exports summary, refusal and ranking CSVs; prints Spearman with exact p. |
 | `fetch_policies.py` | Already run (2026-11-11). Downloads and date-stamps policy snapshots. |
 | `policies/` | Dated snapshots + `manifest.csv`. PayPal uses the `_US` trimmed file. |
+| `NEXT_STEPS.md` | **Start here** — step-by-step guide to finishing. |
 | `writeup/llm_section.md` | Draft of this portion of the report, with blanks for results. |
 | `reference/` | Team documents: survey, data-type matrix, claims verification, breach tracker, notes. |
 

@@ -102,8 +102,9 @@ source, and report a sensitivity analysis rather than a single point estimate.
 
 **Not done**
 
-- [ ] Fill the `Profiles` sheet (awaiting Jules's sourced US-average figures),
-      then rerun `python make_runs.py` to produce the P2 files
+- [x] `Profiles` US_AVG filled with sourced figures (SSA AWI 2024, FICO 714 → Good,
+      Experian $35,687, SCF 2022 median $8,000) — team must confirm it uses the same
+- [x] `NEXT_STEPS.md` — the user's step-by-step guide for finishing; follow it
 - [ ] Two calibration runs (double as the paste test for the 77k-char PayPal input)
 - [ ] 60 Tier 1 runs
 - [ ] Analysis and write-up
@@ -239,14 +240,7 @@ Not Camden's to fix, but they affect how his results should be framed:
 
 ## 11. Do this next
 
-1. Fill `Profiles` (US_AVG row) with Jules's figures and sources; save and close
-2. `python make_runs.py` — now writes all 62 run files
-3. Runs 1–2: calibration against PayPal (P1, P2), logged with Calibration = Y.
-   These are also the paste test — see METHODOLOGY §2.4
-4. Round 1 — runs 3–14 — then check the Summary sheet for *procedural* problems
-5. Rounds 2–5 (runs 15–62)
-6. Team figures into `Comparison` column D; `python analyze.py`
-7. Fill the blanks in `writeup/llm_section.md`
+Follow `NEXT_STEPS.md`. When the user says runs are done, start at its step 9.
 
 ## 12. Environment
 
