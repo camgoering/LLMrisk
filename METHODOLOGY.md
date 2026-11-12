@@ -68,12 +68,6 @@ All profiles are **synthetic**, set to published US averages. Values and sources
 live in the `Profiles` sheet of `data/llm_run_log.xlsx` and come from Jules's source
 research — fill them there, not here, so there is one authority for each figure.
 
-US_AVG as used (sources in the Profiles sheet): income $69,847 (SSA National
-Average Wage Index, 2024); credit tier Good (average FICO 714, March 2026; Good =
-670–739); available credit $35,687 (Experian average total card limit, June 2026);
-savings $8,000 (Federal Reserve SCF 2022, median transaction-account balance). The
-team's calculation must use the same values for the comparison to hold.
-
 No real participant data is ever sent to the model. This is deliberate: the survey
 promises anonymity, and transmitting participant financial details to a third-party
 service would break that promise. State this explicitly in the paper's ethics

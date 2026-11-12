@@ -102,9 +102,9 @@ source, and report a sensitivity analysis rather than a single point estimate.
 
 **Not done**
 
-- [x] `Profiles` US_AVG filled with sourced figures (SSA AWI 2024, FICO 714 → Good,
-      Experian $35,687, SCF 2022 median $8,000) — team must confirm it uses the same
 - [x] `NEXT_STEPS.md` — the user's step-by-step guide for finishing; follow it
+- [ ] Fill the `Profiles` sheet with Jules's sourced figures (the team's defaults),
+      then rerun `python make_runs.py` to produce the P2 files
 - [ ] Two calibration runs (double as the paste test for the 77k-char PayPal input)
 - [ ] 60 Tier 1 runs
 - [ ] Analysis and write-up

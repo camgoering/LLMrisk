@@ -17,37 +17,43 @@ git pull
 python make_runs.py
 ```
 
-It should say **62 of 62 run files written**. The Profiles sheet is now filled with
-sourced US averages, so the P2 files are included.
+Until the Profiles sheet is filled it writes the 31 P1 files only; that's expected.
 
 - [ ] `git pull` done
-- [ ] `make_runs.py` says 62 of 62
+- [ ] `make_runs.py` runs (31 of 62 until Profiles is filled)
 
-## Step 1 — Tell the team the profile numbers (5 min)
+## Step 1 — Get the profile figures from Jules
 
-Your P2 prompt uses these, and **the team's calculation has to use the same ones**
-or the comparison doesn't hold. Send something like this to the group:
+Under the division of labor, sourcing the US averages is Jules's job. The team's
+calculation uses the same figures as its survey defaults, which is what makes your
+P2 numbers comparable to theirs. Ask Jules (or whoever owns the team's defaults)
+for these four values **and their sources**:
 
-> For the LLM runs I'm using these US-average defaults — can our calculation use the
-> same so the numbers are comparable?
-> - Income: $69,847 (SSA National Average Wage Index, 2024)
-> - Credit tier: Good (average FICO 714, FICO Credit Insights, March 2026)
-> - Available credit: $35,687 (Experian average total credit card limit, June 2026)
-> - Savings: $8,000 (Federal Reserve Survey of Consumer Finances 2022, median)
->
-> Jules — if you've already sourced different figures, tell me in the next day and
-> I'll switch to yours.
+| Profiles column | Team default it must match |
+|---|---|
+| Annual Income (USD) | "Default is U.S. avg wage" |
+| Credit Tier | "Estimated Credit Score Quadrant… Default is U.S. avg": which quadrant (Poor / Fair / Good / Excellent) |
+| Available Credit (USD) | whatever the team's calculation uses for that tier ("Default is average U.S. credit limit") |
+| Savings (USD) | "Default is U.S. avg savings" |
 
-The available-credit figure ($35,687) is far above the planning doc's credit table
-($0–$1,500). That table has no source; this one does. Worth raising, but it's the
-team's call.
+Type them into `data/llm_run_log.xlsx` → **Profiles**, row `US_AVG`, with the
+sources in column F. Save, close, then:
 
-**Do not start the runs until the numbers are settled.** If they change, edit the
-`Profiles` sheet in `data/llm_run_log.xlsx`, save, close, and run
-`python make_runs.py` again.
+```powershell
+python make_runs.py
+```
 
-- [ ] Message sent
-- [ ] Numbers confirmed (or updated and `make_runs.py` re-run)
+Now it should say **62 of 62**.
+
+If the team's credit figure is still the planning doc's table ($0 / $500 / $1,000 /
+$1,500, no source), use whatever they actually settle on. Your job is to match
+their inputs, not fix them.
+
+**Don't start the runs until these are in.** The P1 calibration run doesn't need
+them, but the P2 one does.
+
+- [ ] Figures + sources from Jules
+- [ ] Typed into Profiles; `make_runs.py` says 62 of 62
 
 ## Step 2 — Set up ChatGPT (5 min, once)
 
