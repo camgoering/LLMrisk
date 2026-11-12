@@ -118,7 +118,9 @@ For every single run:
    Notes.
 4. Send. **Take the first response only.** Never regenerate, never follow up, never
    nudge toward a number.
-5. Record the result in `data/llm_run_log.xlsx` → `Run Log`, including `Round` and
+5. Record the result (normally via `log_run.py`, which copies the prompt to the
+   clipboard, reads the answer back from it, and writes the row; it never contacts
+   the model) in `data/llm_run_log.xlsx` → `Run Log`, including `Round` and
    `Calibration`, applying the decision rules in §9.
 6. If the model declines to give a figure, hedges without a number, or answers that
    it cannot estimate: record `Refused = Y`, leave the dollar fields blank, and paste

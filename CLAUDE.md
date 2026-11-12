@@ -118,6 +118,7 @@ source, and report a sensitivity analysis rather than a single point estimate.
 | `prompts/PROMPTS.md` | Verbatim prompt text, three conditions, versioned. |
 | `fetch_policies.py` | Already run. Downloads dated policy snapshots. |
 | `make_runs.py` | Builds `runs/NNN_<prompt>_<service>.txt` + `runs/SCHEDULE.csv`. |
+| `log_run.py` | Semi-automated runs: prompt → clipboard, answer ← clipboard, writes Run Log row + `data/responses/NNN_*.txt`. ChatGPT step stays manual. |
 | `analyze.py` | Summary, refusal and ranking CSVs; Spearman with exact p. |
 | `data/llm_run_log.xlsx` | Run log. Summary and Comparison sheets compute themselves. |
 | `policies/` | Dated snapshots + `manifest.csv` (committed). |

@@ -75,7 +75,42 @@ their inputs, not fix them.
 - [ ] Memory / chat history / custom instructions off
 - [ ] METHODOLOGY §1 filled in
 
-## Step 3 — How to do ONE run (about 1–2 min each)
+## Step 3 — Run them with the helper (recommended, ~30–45 s per run)
+
+**Close the workbook in Excel first.** Then in PowerShell:
+
+```powershell
+python log_run.py
+```
+
+The first time, it asks for the model name exactly as ChatGPT shows it. After that it
+remembers it from the last row. For each run:
+
+1. It says which run is next and **puts the prompt on your clipboard**.
+2. In ChatGPT: **new Temporary Chat → Ctrl+V → Enter.** Wait for the whole answer.
+   Don't regenerate or reply.
+3. Click ChatGPT's **copy button** under the answer, go back to PowerShell and press
+   **Enter**. The script reads the answer from the clipboard.
+4. **P2:** it shows the numbers it read from the five-line answer. Press Enter if
+   they're right.
+   **P1:** it lists the dollar amounts it found. Type the one the decision rules
+   pick (below). You can type a range like `50-500` (it records the midpoint and
+   notes it) or `R` for a refusal.
+5. Optional note, then Enter. The row is written to the Run Log, and the answer is
+   also saved to `data/responses/`.
+6. Enter for the next run, or `q` to stop. Running `python log_run.py` again
+   carries on where you left off. `python log_run.py --status` shows progress.
+
+At the end of each round it tells you. That's the moment to open the workbook,
+glance at the Summary sheet, and **close it again** before continuing.
+
+If the clipboard doesn't work for some reason, `python log_run.py --no-clipboard`
+does the same thing, but you open the run file yourself and paste the answer into
+PowerShell, ending with a line that says `END`.
+
+## Step 3b — Doing a run by hand (fallback only)
+
+
 
 Open `runs/SCHEDULE.csv` in Excel next to `data/llm_run_log.xlsx`. Go down the
 schedule in order. For each row:
