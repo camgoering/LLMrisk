@@ -225,6 +225,14 @@ Not Camden's to fix, but they affect how his results should be framed:
   all fifteen services. ChatGPT's column is only 45% coded and shows blanks for
   device identifiers and cookies, which OpenAI's policy clearly covers. Under-coded
   services come out looking artificially safe.
+- **Breach tracker (`reference/Company_Breach_Probability_Tracker.xlsx`, Wyatt &
+  Jeffery).** Uses breaches / years, so the inverted-formula issue above is fixed
+  there. But ChatGPT and Netflix have **zero qualifying breaches**, so P(breach) = 0
+  and the team's risk for both is exactly $0 — a tie at the bottom of the team
+  ranking, which weakens Spearman with n = 6. PayPal's one breach touched 0.008% of
+  users, so the team will likely rank PayPal low; the LLM, which sees only the
+  policy, will likely rank it high. The two methods take different inputs (breach
+  history vs policy text) — frame any disagreement that way, not as one being wrong.
 - **Two incompatible surveys exist:** a pre/post comparison instrument built in
   Qualtrics, and a different income/credit/savings instrument described in the
   planning doc. Unclear which is being used.

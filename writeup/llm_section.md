@@ -125,6 +125,12 @@ calculation weights.]
   survives the absence of ground truth; agreement in dollar figures is not. If the
   orderings agree but magnitudes differ, both approaches may be tracking the same
   underlying signal (how much sensitive data a service holds) at different scales.
+- **Different inputs.** Our calculation is driven by each company's breach
+  history; the model saw only the policy text. Disagreement in ordering may mean
+  the two are measuring different things (what a service *collects* vs how often
+  it has *lost* data), not that either is wrong. Zero-breach services (ChatGPT,
+  Netflix) score $0 in our calculation by construction, which no policy-reading
+  model would reproduce.
 - **Refusals as a design feature.** A model that declines to give a number may be
   behaving more responsibly than one that produces a confident figure.
 
@@ -147,6 +153,9 @@ class project, and limits that would remain with more resources.*
 - **Long inputs.** Policies of 29k–77k characters are long for a single message;
   models are known to weigh content unevenly across long inputs, so clauses deep in
   a policy may influence the estimate less than early ones.
+- **Ties in the comparison.** Two of six services score exactly $0 in our
+  calculation (no qualifying breaches), so the team ranking has a tie at the bottom,
+  further reducing what a rank correlation over six services can show.
 - **Small n.** Five repeats per cell gives a usable but imprecise standard
   deviation, and six services gives little power for a rank correlation.
 - **Manual transcription.** Figures were copied by hand; every logged figure can be

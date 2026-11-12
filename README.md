@@ -18,7 +18,7 @@ team's own risk calculation.
 | `fetch_policies.py` | Already run (2026-11-11). Downloads and date-stamps policy snapshots. |
 | `policies/` | Dated snapshots + `manifest.csv`. PayPal uses the `_US` trimmed file. |
 | `writeup/llm_section.md` | Draft of this portion of the report, with blanks for results. |
-| `reference/` | Team documents: survey, data-type matrix, claims verification, notes. |
+| `reference/` | Team documents: survey, data-type matrix, claims verification, breach tracker, notes. |
 
 ## Order of operations
 
