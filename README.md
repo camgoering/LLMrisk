@@ -34,7 +34,7 @@ pip install openpyxl
    and `runs/SCHEDULE.csv`. Until Profiles is filled only the P1 files are written.
 3. For each run in `SCHEDULE.csv`: open its file, Ctrl+A, Ctrl+C, paste into a **new**
    chat with browsing off, send, and log the first response in **Run Log**, including
-   `Round` and `Calibration`. Runs 1–2 are calibration (Round 0, Calibration = Y).
+   `Round` and `Calibration`. Runs 1 and 32 are calibration (Round 0, Calibration = Y). P1 (1–31) runs on day 1, P2 (32–62) on day 2.
 4. **Summary** and **Comparison** compute as you type. Type the team's figures into
    Comparison column D to get Spearman's rho.
 5. `python analyze.py` — CSVs for the report, plus rho for P1 vs P2 and vs the team.

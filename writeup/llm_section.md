@@ -51,11 +51,14 @@ question is asked.
 **Procedure.** Every run used a new chat, so no earlier answer could influence a
 later one. The prompt and policy were pasted as one message and only the first
 response was recorded: responses were never regenerated, followed up or rephrased.
-Runs were collected in five rounds, each covering all six services under P1 and
-then P2, so that any unannounced model update during collection would affect all
-services equally rather than whichever service happened to be running. Two
-calibration runs on PayPal checked the workflow beforehand and were excluded from
-analysis. In total there were [60] scored runs.
+All P1 runs were collected on [date] and all P2 runs on [date]. Within each day,
+runs were collected in five rounds, each covering all six services, so that any
+unannounced model update during collection would affect all services equally
+rather than whichever service happened to be running. Because the two prompts were
+run on consecutive days, a model update between them cannot be separated from the
+prompt effect; the model version shown in the interface was recorded on every run
+[and did / did not change]. One calibration run on PayPal opened each day's block
+and was excluded from analysis. In total there were [60] scored runs.
 
 **Coding responses.** Rules for turning responses into numbers were fixed before
 collection began, so that how an awkward response was handled could not depend on
@@ -144,6 +147,9 @@ class project, and limits that would remain with more resources.*
 - **No ground truth.** No published source gives the true annual dollar risk of
   accepting a privacy policy. We can measure the model's consistency and its
   agreement with our calculation, but neither establishes that either is correct.
+- **Prompts run on separate days.** P1 and P2 were collected on consecutive days
+  rather than interleaved, so a model change between days would be confounded with
+  the prompt effect.
 - **One model, one interface.** Results describe [model] as served through its web
   interface during [dates], not LLMs in general. The provider may update the model
   without notice; rounds spread this across services but cannot remove it.

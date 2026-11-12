@@ -105,8 +105,9 @@ source, and report a sensitivity analysis rather than a single point estimate.
 - [x] `NEXT_STEPS.md` — the user's step-by-step guide for finishing; follow it
 - [ ] Fill the `Profiles` sheet with Jules's sourced figures (the team's defaults),
       then rerun `python make_runs.py` to produce the P2 files
-- [ ] Two calibration runs (double as the paste test for the 77k-char PayPal input)
-- [ ] 60 Tier 1 runs
+- [ ] P1 block, day 1: runs 1–31 (run 1 = calibration + paste test)
+- [ ] P2 block, day 2: runs 32–62 (run 32 = calibration), after the profile is set
+      from aggregate survey results / team defaults
 - [ ] Analysis and write-up
 
 ## 6. Files
@@ -145,8 +146,8 @@ refusal rate 0.25, with a calibration row of 100000 correctly excluded.
    `Raw Response`. Refusal rate goes in the paper.
 4. **Paste the saved snapshot.** Never let the model browse to a URL — browsing makes
    the input uncontrolled and may fetch a different regional variant.
-5. **Run in rounds, not blocks.** Round = all six services under P1, then all six
-   under P2. Five rounds. If the provider updates the model mid-collection, rounds
+5. **Run in rounds.** All of P1 on day 1, all of P2 on day 2 (a recorded deviation:
+   profile values weren't ready); within each day, five rounds of the six services. If the provider updates the model mid-collection, rounds
    spread that drift evenly across services instead of confounding it with whichever
    service was being run at the time.
 

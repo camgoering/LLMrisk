@@ -20,8 +20,8 @@ P1 needs no profile, so its files are written even while the Profiles sheet is
 blank. P2 files are skipped (and marked PENDING in the schedule) until the profile
 row has values for income, credit tier, available credit and savings.
 
-Order follows METHODOLOGY.md §5: two PayPal calibration runs (P1, P2), then five
-rounds of [six services under P1, then six under P2].
+Order follows METHODOLOGY.md §5: all of P1 first (one PayPal calibration run,
+then five rounds of the six services), then all of P2 the same way.
 
 Requires: openpyxl
 """
@@ -55,7 +55,6 @@ TIER1 = {
 }
 ROUNDS = 5
 TIER1_PROMPTS = ("P1", "P2")
-CALIBRATION = [("PayPal", "P1"), ("PayPal", "P2")]
 
 
 def load_prompts(path):
@@ -113,12 +112,16 @@ def fill(template, values):
 
 
 def schedule():
+    """P1 block first (day 1), then P2 block (day 2) — see METHODOLOGY §5.
+
+    Each block: one calibration run on PayPal (round 0), then five rounds of all
+    six services in fixed order.
+    """
     run_id = 0
-    for svc, p in CALIBRATION:
+    for p in TIER1_PROMPTS:
         run_id += 1
-        yield run_id, 0, "Y", p, svc          # round 0 = calibration
-    for rnd in range(1, ROUNDS + 1):
-        for p in TIER1_PROMPTS:
+        yield run_id, 0, "Y", p, "PayPal"          # round 0 = calibration
+        for rnd in range(1, ROUNDS + 1):
             for svc in TIER1:
                 run_id += 1
                 yield run_id, rnd, "N", p, svc

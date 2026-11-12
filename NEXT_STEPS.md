@@ -1,8 +1,10 @@
 # Finishing the LLM portion — step by step
 
 Everything is set up. What's left is the ChatGPT runs (only you can do these), then
-analysis and write-up (Claude can do most of it). Roughly **2 hours of runs**, which
-can be split across sessions.
+analysis and write-up (Claude can do most of it).
+
+**Plan: P1 today (runs 1–31, ~1 hour), P2 tomorrow (runs 32–62, ~1 hour)** once the
+profile values are settled from the survey results.
 
 Tick boxes as you go.
 
@@ -49,8 +51,7 @@ If the team's credit figure is still the planning doc's table ($0 / $500 / $1,00
 $1,500, no source), use whatever they actually settle on. Your job is to match
 their inputs, not fix them.
 
-**Don't start the runs until these are in.** The P1 calibration run doesn't need
-them, but the P2 one does.
+**P1 doesn't need these, so start P1 now.** P2 (day 2) does. See step 6.
 
 - [ ] Figures + sources from Jules
 - [ ] Typed into Profiles; `make_runs.py` says 62 of 62
@@ -101,8 +102,8 @@ schedule in order. For each row:
 | Top Data Types | P2's TOP_DATA_TYPES line; blank for P1 |
 | Raw Response | **paste the whole answer** — see tip below |
 | Notes | anything odd: `midpoint`, `converted from monthly`, `searched`… |
-| Round | the `round` from SCHEDULE.csv (0 for runs 1–2) |
-| Calibration | `Y` for runs 1–2, `N` for everything else |
+| Round | the `round` from SCHEDULE.csv (0 for runs 1 and 32) |
+| Calibration | `Y` for runs 1 and 32, `N` for everything else |
 
 7. Close the chat. Next row.
 
@@ -120,47 +121,56 @@ formula bar at the top** (or press **F2**), then paste. It all goes into one cel
 - Monthly → ×12. Lifetime → convert to annual. Note it.
 - No number at all → Refused = Y, dollar cells blank, still paste the response.
 
-## Step 4 — Calibration: runs 1 and 2 (5 min)
+## Step 4 — Day 1, P1: calibration (run 1, 2 min)
 
-These are PayPal P1 and P2. They test the workflow and are **not counted**.
+PayPal P1. It tests the workflow and is **not counted**.
 
 - If ChatGPT says the message is **too long**: stop and send Claude the exact
   error. METHODOLOGY §2.4 covers this (a fixed cutoff for every service), and the
   run files will need regenerating.
-- If run 2 (P2) doesn't come back in the five-line format, note it but carry on;
-  the decision rules handle it.
-- Look at the Summary sheet: PayPal should still show **n = 0**. That proves
+- Check the Summary sheet: PayPal P1 should still show **n = 0**. That proves
   calibration rows are being excluded.
 
-- [ ] Run 1 logged (Calibration = Y)
-- [ ] Run 2 logged (Calibration = Y)
-- [ ] No "too long" error; Summary shows n = 0 for PayPal
+- [ ] Run 1 logged (Round 0, Calibration = Y); no "too long" error
 
-## Step 5 — Round 1: runs 3–14 (about 20 min)
+## Step 5 — Day 1, P1: rounds 1–5 (runs 2–31, about 50 min)
 
-Do all twelve. Then check the Summary sheet: every P1 and P2 cell for the six
-services should show n = 1 (or a refusal).
+One round = the six services in order (PayPal, X, Google, ChatGPT, Netflix,
+LinkedIn). After round 1, check the Summary sheet: each P1 row should show n = 1
+(or a refusal). Look only for **procedure** problems. **Don't change anything
+because of the numbers.**
 
-Only look for **procedure** problems here (wrong column, missing rounds). **Do not
-change anything because of the numbers** — that would contaminate the data.
+- [ ] Round 1 (runs 2–7)
+- [ ] Round 2 (runs 8–13)
+- [ ] Round 3 (runs 14–19)
+- [ ] Round 4 (runs 20–25)
+- [ ] Round 5 (runs 26–31)
 
-- [ ] Round 1 done (runs 3–14)
+Note the model name ChatGPT shows. It should be the same tomorrow.
 
-## Step 6 — Rounds 2–5: runs 15–62 (about 1.5 hours)
+## Step 6 — Day 2, P2: profile, calibration, rounds 1–5 (runs 32–62)
 
-Same thing, four more times. Rounds can be split across days. Do whole rounds at a
-time if you can, and finish all five rounds within a few days so the model doesn't
-change underneath you.
+1. Put the profile values into **Profiles** (row `US_AVG`), with where each came
+   from in column F. If they come from the survey, use **group-level figures**
+   (e.g. the median income across respondents), never one person's answers.
+   Sending a participant's own answers to ChatGPT would break the survey's
+   anonymity promise.
+2. Save, close, run `python make_runs.py`. It should now say **62 of 62**.
+3. Run 32 = P2 calibration (Round 0, Calibration = Y). If the answer doesn't come
+   back in the five-line format, note it and carry on; the decision rules handle it.
+4. Rounds 1–5: runs 33–38, 39–44, 45–50, 51–56, 57–62.
+5. Confirm the model name is the same as yesterday. If it changed, write both in
+   METHODOLOGY §1. That goes in the limitations.
 
-- [ ] Round 2 (runs 15–26)
-- [ ] Round 3 (runs 27–38)
-- [ ] Round 4 (runs 39–50)
-- [ ] Round 5 (runs 51–62)
+- [ ] Profile filled; `make_runs.py` says 62 of 62
+- [ ] Run 32 (calibration)
+- [ ] Rounds 1–5 (runs 33–62)
 
-**Short on time?** Stop after round 3. Three repeats still gives a standard
-deviation. Note it in the write-up. Don't drop services.
+**Short on time?** Stop each block after round 3 (P1: run 19; P2: run 50). Three
+repeats still gives a standard deviation. Note it in the write-up. Don't drop
+services.
 
-Fill in the last collection date in METHODOLOGY §1.
+Fill in the collection dates in METHODOLOGY §1.
 
 ## Step 7 — Get the team's six numbers
 
