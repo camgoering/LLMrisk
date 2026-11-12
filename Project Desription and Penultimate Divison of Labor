@@ -1,0 +1,169 @@
+John - Add survey to Qualtrics, create final report requirement checklist and draft report, make we're on track to make sure all requirements will be fulfilled
+
+	Survey is going to be:
+	Effectively 4 questions with 15 branches and with sensitive questions at the end for higher participation
+	Select Service Used (Established Policy Acceptance)
+	Select which optional collected data given (Used probability calculation)
+	Estimated Yearly Income (Salary or Hourly to nearest $5000 or $5 respectively) (Used in impact calculation) (Default is U.S. avg wage)
+	Estimated Credit Score Quadrant (Used to Find Credit Limit) (Used in impact calculation) (Default is U.S. avg)
+	Estimated Savings (Default is U.S. avg)
+	
+	Ideal Result: Qualtrics Survey Link, Latex Final Report Draft with default values that would fulfill requirements if expanded	
+
+	Help wherever necessary
+	
+Jules - Look Over Survey, Find related works
+
+	Find Related Works and figure out how we have improved on them
+	Might require restructuring the calculation or data collection methodology
+	Possibly help out with other tasks when done 
+    Choice of:
+        probability data collection 
+        researching sources for assumptions (no one read privacy policies) and average (ex. U.S. avg wage) sources for references page	
+	      expanding final report draft
+        source for percent chance that the covered data would be used in an identity theft
+        any other way deemed useful and productive
+
+	Ideal Result: List of sources, summarization of each, what we "used" from each, and how we improved on each	
+
+Camden - LLM Portion of project
+
+	Figure out how to effectively prompt AI to get a number risk calculation from Ai to compare to ours (dollars per year)
+	Preferably with 3 second prompt with privacy policy upload philosophy
+	Suggestion: use a table generation for more anonymity. Not required
+	Start with one model (Prob chatgpt) expand to more if we have time
+	Record methodology necessary to recreate report
+	Make sure to keep in mind limitations, assumptions, compromises, and ethical concerns that come from using an Ai to do this
+		ex. Limitation of using Ai is the necessity of a user sacrificing the privacy of their survey data to an LLM
+	
+	Ideal result would be a bunch of excel data that we can take averages or find standard deviations that is directly comparable to our risk calculation
+
+Wyatt and Jeffery - Collect Data and Calculate Portions of Probability
+	Research breach history for our 15 companies
+	For each company collect:
+	- Year of first Breach
+	- Number of breaches since first
+		- A breach is > 10,000 users and breach of identifying information that the company was responsible for (i.e. not a third party like stripe)
+			ex. this would not include business data, diagnostic, or technical data
+			ex. Would be name email address password and any other data used to steal an identity
+			note: If it is undisclosed what data was breached, include the breach in the company breach calculation, but will use average chance
+			      of covered data being involved
+
+	For each breach collect:
+	- Types of our defined data types breached in each breach
+		        note: Use Wyatts Sheet to see what data each company collects
+	- number of users involved in breach or estimated value
+	- estimated number of total users of the company at the time of specific breach
+	
+	Keep in mind limitation of research.
+	Make sure to record how you collected the data so someone else could replicate our study / collect the same data
+		Use ai to find breaches that matches our criteria or to find sources of breaches but the data will largely be scattered across
+		databased articles websites just make sure to cite
+		ex. cite sources of data website / article is fine with data accessed
+		note: Ask ai for source of data
+	
+	Step 1: Figure out how many breaches a company has had (ai would be great for this or data breach websites)
+	Step 2: Figure out which meet our criteria (copmany responsibility, number of users, type of data breached)
+	Step 3: Gather types of data breached, number of users breached, estimated users company had that year
+	
+	Ideal result is an excel sheet that can be easily referenced (organized as you see fit) but includes all data with references backing up each cell or number or group of numbers such that each group of cells can be directly used in the probability risk calculation
+
+
+Central tenant of our project is 
+
+	RISK = IMPACT * PROBABILITY
+
+Specific user risk equals total dollar amount that an identity theft event could cost within a year including time lost to recovery times the probability of identity theft occurring given a data breach by a specific company within a year
+
+Impact - Depends on user situation. Based on default values or if survey results
+
+Impact = Credit + Savings + Average Time Spent Dealing with identity theft * Hourly Rate
+
+Credit = Available Credit or Possible Available credit Based on Credit Score Survey Question
+Poor Fair  Good Excellent
+  $0 $500 $1000     $1500
+Default is average U.S. credit limit
+
+Hourly Rate Survey Question to nearest $5 = Salary Survey Question to neared $5000 / 40 hours / week / 52 week / year
+Hourly Rate * Average Time Spent Dealing with Identity Theft
+Default is average U.S. wage
+
+Saving - Survey Question to nearest $5000
+Default is average U.S. savings
+
+
+Probability - Depends on what the user shared with the service and service breach history
+Probability = Average Chance of Identity theft given breach * Chance of breach * Chance of any user being involved * Average chance of any covered data being involved * Chance data would be used in an identity theft event
+
+times % Chance that Identity theft occurs given a data breach occurred
+	From Identity theft report
+
+times % Chance a company will have a data breach based on historical data
+	current year - year of first breach / total breaches = % chance of breach per year
+
+times % Average Chance of any user being involved per breach 
+  users involved in breach / estimated total users at the time
+
+Additive{
+
+% Chance that the covered data would be breached given a breach by this company
+	For each breach, record our the number of times our data type was breached in a breach then divide by total breaches since first breach
+	This needs to be calculated for each data type for each company
+
+times % Chance that the covered data would be used in an identity theft event additive for each data type
+	This only needs to be calculated once and is derived from a report or study
+}
+
+LLM Portion:
+Starting with:
+
+What's the risk of accepting this privacy policy in terms of a specific yearly dollar amount?
+Upload policy
+
+Develop the Prompt further to have it ask how to improve the prompt to align with out project
+
+
+Final report Portion:
+	should be written in the style of a workshop paper
+
+Intro: 
+	Our project explores the effectiveness of leveraging LLMs to inform user risk decisions
+
+Motivation:
+	 no one reads privacy policies
+
+Related work:
+	sources of similar studies that we have build upon
+
+Methods: 
+	Enough info to evaluate and replicate your our study. i.e. detailed information on data collection, risk calculation, survey protocol (anonymized sent to class) (vehicle Qualtrics, 	administration (data is stored an processed here), and conduction (link send via discord)). LLM prompting
+
+Results:
+	 graphs and tables of result data
+
+Discussion:
+	 of Results anodyne verbiage.
+
+Limitations: 
+	validity considerations, using llms, data gathered from scattered sources, ethical considerations of rounded figured, sample size, using averages, extrapolating data
+
+Conclusions: 
+	drawn with limitation caveats. We found AI can be used or cant be used to provide a reliable risk calculation.
+
+Future work: 
+	Assuming more resources (time, energy, or money) our study could be build upon by collecting better data, expanding survey, using better assumptions, using less averages, expanding 
+	out sample size, improving ecological validity by basing our calculation on more data, Adding probability of muliple identity theft
+
+References: 
+	risk calculation inspiration and privacy research, data sources, related works, averages and assumptions cited
+
+Lessons learned: 
+	Statistics and risk are largely misrepresented and made up, Surveys have a lot of ethical concerns, a project is a process that is iterated,
+
+Appendix: 
+	Survey body plus questions, Presentation of research on (lack of) privacy laws in the United states
+
+The limitations should include both class-project-related limitations (
+e.g., we weren't able to recruit enough participants to draw strong conclusions) but also
+limitations that would still obtain if you had more time/funds/etc.
+

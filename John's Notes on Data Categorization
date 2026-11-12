@@ -1,0 +1,186 @@
+Classification of data covered under privacy policy.
+
+
+Privacy Policy
+
+Information that can be used to distinguish or trace an individual’s identity, 
+either alone or when combined with other information that is 
+linked or linkable to a specific individual.
+
+Name
+
+What is PII?
+Personally Identifiable Information (PII) is defined as:
+Information that can be used to distinguish or trace an individual’s identity, either alone or when combined with other information that is linked or linkable to a specific individual.
+
+
+The National Institute of Standards and Technology (NIST) defines Personally Identifiable Information (PII) as any information that can be used to identify an individual. This includes various details that uniquely connect to a person, including but not limited to:
+
+    Name
+    Social Security number
+    Date and place of birth
+    Mother's maiden name
+    Biometric records
+    Medical details
+    Educational history
+    Financial records
+    Employment information
+
+
+
+
+A subset of PII is Sensitive Personally Identifiable Information (SPII). If SPII is lost, compromised, or disclosed without authorization, it could cause significant harm, embarrassment, inconvenience, or unfair treatment to an individual.
+
+
+Personally identifiable information (PII)
+
+Protected health information (PHI) Protected under hippa for "covered entities" Not tech companies so is classified as PII
+
+
+Sensitive Personally Identifiable Information (SPII) 
+A subset of PII is Sensitive Personally Identifiable Information (SPII). If SPII is lost, compromised, or disclosed without authorization, it could cause significant harm, embarrassment, inconvenience, or unfair treatment to an individual.
+
+
+Criminal justice information
+Student educational records
+Intellectual property
+Financial and payment card information
+
+
+Laws and standards related to information protection but many not require them
+GDPR
+GLIB
+Privacy Act of 1974
+HIPPA
+COPPA (Children)
+TIPA (Tennessee)
+CCPA
+FTC ACT Section 5 Unfair or Deceptive Practices
+
+Derived from Apple's App Store list
+likely hood of being leaked and subsequently exploited
+
+Impact is + chance of being leaked + Impact if exploited + chance of being exploited 
+
+Contact Information (Impact = Medium) Name, Email, Phone Number, Address 
+Password (Impact: Medium or High depending on if you use the same password everywhere bank, credit card company, credit bureau, etc)
+Sensitive Information (Impact= ?? Demographics, residency status, voting preferences,  )
+Location (Impact = low but can be combined with other data to be useful)
+Browsing/Search History (Impact Low )
+User Content (Impact = None or high dep on if its sensitive)
+Health (Impact = None or High depending)
+Diagnostics (Impact: None )
+
+Common Information Units
+
+email
+phone number
+password
+
+name
+usage information (Behaioural)
+user generated content
+location information
+
+credit card
+Address
+
+date of birth
+
+sensitive information 
+pregnancy status
+labor union affiliation
+
+demographic information
+Preference information
+
+search history
+browsing history
+
+contacts
+
+health
+fitness
+credit score
+other financial information
+
+functionality
+diagnostic
+personalization
+analytics 
+
+
+crash data
+performance data
+environment scanning
+
+
+Identity category ranked by probability of user sharing information with service
+Shadow Identity		
+Digital Identity	
+Behavioral Identity		
+Financial Identity	
+Government Identity	
+Medical Identity 	
+	
+Information unit 
+Actual actionable / Potential / dependent on	
+	
+
+Stolen Identity 
+SSN 
+DOB
+
+Credit card number (usually under PCI-DSS)
+
+PHI
+Medical History Could be used to discriminate
+Or black mail if its sensitive 
+
+PII
+Address
+Resume 
+Personal information used deny job application
+
+
+Real First Last
+Username
+Password Leaked
+Phone number
+email (potential attack vector)
+Passport is highly desirable but not many people have it
+
+With a drivers license you can hack a venmo.
+
+information
+behavioral data collected (phone calls texts) (risk increased for individuals with access to national corporate sensitive information)
+watch history etc.
+Usage data
+
+Exposure
+
+information units are scored based on 3 factors
+
+Impact 
+	categories (prevalence)
+	actionability / dependence
+	actual / potential
+
+covered under the privacy policy but chance of being shared with the company or service
+
+
+Build Compromise Chains to see what data is covered under privacy policy
+privacy policy -> username password -> breach -> Hack other accounts (email, apple, etc) -> access identity documents (passport sensitive photos) -> Identity theft, (financial, actual, medical)
+		  Address								    	      
+		  phone number
+
+	      -> Demographic data used to server ads
+	      -> behavior info used to build a profile
+	      				       -> health information exposed 		 							   -> affects job opportunities
+
+	      -> metadata
+	      -> user generated content
+	      -> 
+	      -> diagnostic, performance, 
+	      -> browsing history
+	      -> search history
