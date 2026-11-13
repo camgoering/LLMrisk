@@ -91,15 +91,23 @@ source, and report a sensitivity analysis rather than a single point estimate.
 - [x] Methodology / replication protocol drafted (`METHODOLOGY.md`)
 - [x] Run-log workbook built with self-computing stats (`data/llm_run_log.xlsx`)
 - [x] Policy snapshots fetched for all six Tier 1 services
+- [x] PayPal non-US sections trimmed → `policies/PayPal_2026-11-11_US.txt`
+- [x] Decision rules in `METHODOLOGY.md` §9; length rule (§2.3–2.4), rounds and
+      calibration rules (§5) added
+- [x] `Services` sheet filled; Run Log has `Round` and `Calibration` columns;
+      Summary excludes calibration; Comparison computes Spearman (verified in LibreOffice)
+- [x] `make_runs.py` builds paste-ready run files + `runs/SCHEDULE.csv`
+- [x] `analyze.py` excludes calibration, computes rho vs team with exact p
+- [x] Report section drafted (`writeup/llm_section.md`), results left blank
 
 **Not done**
 
-- [ ] Trim PayPal's non-US regional sections; confirm the full text pastes into the chat UI
-- [ ] Write the decision rules into `METHODOLOGY.md` (text in §8 below)
-- [ ] Fill the `Profiles` sheet (awaiting Jules's sourced US-average figures)
-- [ ] Fill the `Services` sheet from `policies/manifest.csv`
-- [ ] Two calibration runs
-- [ ] 60 Tier 1 runs
+- [x] `NEXT_STEPS.md` — the user's step-by-step guide for finishing; follow it
+- [ ] Fill the `Profiles` sheet with Jules's sourced figures (the team's defaults),
+      then rerun `python make_runs.py` to produce the P2 files
+- [ ] P1 block, day 1: runs 1–31 (run 1 = calibration + paste test)
+- [ ] P2 block, day 2: runs 32–62 (run 32 = calibration), after the profile is set
+      from aggregate survey results / team defaults
 - [ ] Analysis and write-up
 
 ## 6. Files
@@ -109,20 +117,26 @@ source, and report a sensitivity analysis rather than a single point estimate.
 | `METHODOLOGY.md` | Replication protocol. The authority on how runs are done. |
 | `prompts/PROMPTS.md` | Verbatim prompt text, three conditions, versioned. |
 | `fetch_policies.py` | Already run. Downloads dated policy snapshots. |
-| `analyze.py` | Optional. Exports summary and ranking CSVs. |
+| `make_runs.py` | Builds `runs/NNN_<prompt>_<service>.txt` + `runs/SCHEDULE.csv`. |
+| `log_run.py` | Semi-automated runs: prompt → clipboard, answer ← clipboard, writes Run Log row + `data/responses/NNN_*.txt`. ChatGPT step stays manual. |
+| `analyze.py` | Summary, refusal and ranking CSVs; Spearman with exact p. |
 | `data/llm_run_log.xlsx` | Run log. Summary and Comparison sheets compute themselves. |
-| `policies/` | Dated snapshots + `manifest.csv`. Gitignored except the manifest. |
+| `policies/` | Dated snapshots + `manifest.csv` (committed). |
+| `writeup/llm_section.md` | Draft report section. |
+| `reference/` | Team documents (survey, data-type matrix, claims verification, notes). |
 
 ### Workbook sheets
 
 `README` (legend) · `Profiles` (synthetic user profiles) · `Services` ·
-`Run Log` (one row per run; dropdowns on Prompt, Service, Refused, Truncated) ·
+`Run Log` (one row per run; dropdowns on Prompt, Service, Refused, Truncated,
+Calibration; Round 0 = calibration) ·
 `Summary` (auto: n, mean, SD, CV, min, max, refusal rate per service × prompt) ·
-`Comparison` (LLM mean vs team figure, with rank columns).
+`Comparison` (LLM P2 mean vs team figure; ranks among services with both figures,
+ties averaged; Spearman's rho in B21).
 
 Yellow cells are for typing in; blue cells are formulas. Verified working: three
 runs of 4000/6000/8000 plus one refusal yields n=3, mean 6000, SD 2000, CV 0.33,
-refusal rate 0.25.
+refusal rate 0.25, with a calibration row of 100000 correctly excluded.
 
 ## 7. Protocol rules that must not be broken
 
@@ -133,10 +147,14 @@ refusal rate 0.25.
    `Raw Response`. Refusal rate goes in the paper.
 4. **Paste the saved snapshot.** Never let the model browse to a URL — browsing makes
    the input uncontrolled and may fetch a different regional variant.
-5. **Run in rounds, not blocks.** Round = all six services under P1, then all six
-   under P2. Five rounds. If the provider updates the model mid-collection, rounds
+5. **Run in rounds.** All of P1 on day 1, all of P2 on day 2 (a recorded deviation:
+   profile values weren't ready); within each day, five rounds of the six services. If the provider updates the model mid-collection, rounds
    spread that drift evenly across services instead of confounding it with whichever
    service was being run at the time.
+
+**Decided with the group (Nov 12):** paste, not upload (recorded in METHODOLOGY
+§2); P2 stays as written in PROMPTS.md v1.0 (profile + identity-theft framing +
+five-line format); P1 on day 1, P2 on day 2.
 
 ## 8. Decision rules — paste into METHODOLOGY.md before any runs
 
@@ -214,20 +232,21 @@ Not Camden's to fix, but they affect how his results should be framed:
   all fifteen services. ChatGPT's column is only 45% coded and shows blanks for
   device identifiers and cookies, which OpenAI's policy clearly covers. Under-coded
   services come out looking artificially safe.
+- **Breach tracker (`reference/Company_Breach_Probability_Tracker.xlsx`, Wyatt &
+  Jeffery).** Uses breaches / years, so the inverted-formula issue above is fixed
+  there. But ChatGPT and Netflix have **zero qualifying breaches**, so P(breach) = 0
+  and the team's risk for both is exactly $0 — a tie at the bottom of the team
+  ranking, which weakens Spearman with n = 6. PayPal's one breach touched 0.008% of
+  users, so the team will likely rank PayPal low; the LLM, which sees only the
+  policy, will likely rank it high. The two methods take different inputs (breach
+  history vs policy text) — frame any disagreement that way, not as one being wrong.
 - **Two incompatible surveys exist:** a pre/post comparison instrument built in
   Qualtrics, and a different income/credit/savings instrument described in the
   planning doc. Unclear which is being used.
 
 ## 11. Do this next
 
-1. Trim PayPal's UK/EEA, Mexico and Singapore sections; paste-test the result
-2. Add the §8 decision rules to `METHODOLOGY.md`
-3. Fill `Profiles` and `Services` in the workbook
-4. Two calibration runs against PayPal (P1 and P2), logged and excluded
-5. Round 1 — twelve runs — then check the Summary sheet before continuing
-6. Rounds 2–5
-7. `python3 analyze.py`, fill the team's figures into `Comparison`, compute Spearman
-8. Write the section; limitations are already drafted in `METHODOLOGY.md` §7
+Follow `NEXT_STEPS.md`. When the user says runs are done, start at its step 9.
 
 ## 12. Environment
 

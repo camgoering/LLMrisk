@@ -1,0 +1,54 @@
+## PayPal Privacy Policy: What is your financial risk per year?
+
+My estimated planning figure is $25 per year in privacy-related risk for a typical personal PayPal user. However, this is an illustrative estimate, not a statistically established loss figure. PayPal's October 12, 2026 privacy policy does not provide enough information to calculate your actual annual financial risk.
+
+Here's the important distinction:
+
+- Direct annual cost of accepting the privacy policy: $0. The policy itself doesn't impose an annual privacy fee.
+- Potential indirect cost: Your information could contribute to targeted advertising, unwanted purchases, identity theft, fraud, or other financial harm.
+- Potential worst-case loss: Much higher than $25 if your financial information is compromised, although accepting this policy does not mean that will happen.
+
+The most significant concern isn't that PayPal explicitly charges you for your data. It's the breadth of financial, behavioral, and identity information that it can collect, analyze, retain, and disclose.
+
+## Where the financial exposure comes from
+
+Based on the policy you provided:
+
+| Privacy concern                                | Potential financial consequence                                 |
+| ---------------------------------------------- | --------------------------------------------------------------- |
+| Sharing shopping preferences with merchants    | More targeted advertising and potentially unnecessary purchases |
+| Collecting financial and identity information  | Greater potential impact if information is compromised          |
+| AI-based creditworthiness and risk assessments | Possible account restrictions or service disruptions            |
+| Sharing information with third parties         | Less control over how information is subsequently handled       |
+| Retaining data after account closure           | Continued exposure of retained information                      |
+
+PayPal states that information associated with your account may be retained for 10 years after the relationship ends, subject to exceptions. It also permits certain automated decisions that can restrict access to services.
+
+## What does $25 per year actually mean?
+
+One hypothetical way to produce that estimate is:
+
+\\[ 1\\%\times \\$2,500=\boxed{\\$25\text{ per year}} \\]
+
+That assumes a 1% annual probability of a $2,500 privacy-related financial loss. Neither the probability nor the loss amount is established by this policy. Therefore, $25 is only a scenario for thinking about risk, not a prediction.
+
+## How I would reduce the risk
+
+PayPal specifically offers several controls:
+
+1. Go to Settings → Data and Privacy and opt out of personalized shopping data sharing.
+2. Limit sharing with nonaffiliated companies for marketing.
+3. Avoid linking unnecessary financial accounts and importing your contacts.
+4. Enable two-factor authentication and account alerts.
+
+### Bottom line
+
+Illustrative annual risk allowance
+
+# $25/year
+
+Not a verified actuarial estimate
+
+I would not treat $25 as a proven cost of accepting this policy. The defensible financial conclusion is that the direct cost is $0 annually, while the expected indirect loss cannot be reliably quantified from the provided policy.
+
+If your main concern is whether accepting PayPal's policy exposes your bank account to additional financial danger, the answer is that it introduces some privacy and information-security exposure, but the policy alone doesn't establish how much additional monetary risk you assume.

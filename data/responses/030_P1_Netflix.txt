@@ -1,0 +1,33 @@
+Based on Netflix’s April 10, 2026 Privacy Statement, I would assign an illustrative financial risk of $10 per year to accepting this policy, excluding your subscription cost.
+
+That is a budgeting estimate, not a measured loss or a figure disclosed by Netflix.
+
+### Estimated annual financial exposure
+
+| Risk category                                                    | Illustrative annual cost |
+| ---------------------------------------------------------------- | ------------------------ |
+| Personal information used for targeted advertising and profiling | $3                       |
+| Increased exposure to scams or unwanted marketing                | $2                       |
+| Potential financial consequences of a data breach                | $4                       |
+| Time spent managing privacy issues                               | $1                       |
+| Total estimated risk                                             | $10/year                 |
+
+These amounts are assumptions, not independently verified statistical estimates. A serious identity-theft incident could cost much more, while most users may experience no direct financial loss.
+
+### What concerns me in the policy
+
+Netflix explicitly permits several practices that create privacy exposure:
+
+- Data sharing: Certain identifiers may be sold or shared under applicable state privacy-law definitions.
+- Cross-site tracking: Advertising technologies can collect information about your activity across different websites.
+- Data retention: Netflix does not promise a single fixed deletion deadline for all information.
+- Third-party disclosures: Information can be disclosed to advertising companies, service providers, and business partners.
+- International transfers: Your information may be processed in countries with different privacy protections.
+
+### My recommendation
+
+I would accept the policy only if I intended to use Netflix, and then disable optional behavioral advertising and data-sharing settings.
+
+You can review these controls at [Netflix's privacy opt-out page](https://www.netflix.com/dnsspi?utm_source=chatgpt.com).
+
+Bottom line: My illustrative estimate is $10 per year, but the policy provides insufficient evidence to calculate your actual expected financial loss. There is no additional $10 charge for accepting it, and $0 in direct financial loss is entirely possible.

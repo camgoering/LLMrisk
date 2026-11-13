@@ -1,0 +1,43 @@
+Based on the Netflix Privacy Statement you provided (updated April 10, 2026), I'd use $25 per year as a rough, illustrative dollar value for the privacy you're giving up, separate from your subscription fees.
+
+However, that is not a documented or statistically established expected loss. Netflix's policy does not provide enough information to calculate your actual annual financial risk.
+
+The distinction matters because accepting the policy does not automatically cost you money. Instead, you allow Netflix to collect, analyze, retain, and share information that has commercial value and creates some potential financial exposure.
+
+## Estimated annual privacy exposure
+
+The following figures are hypothetical scenarios, not measured Netflix-specific losses.
+
+| Scenario                                                             | Illustrative yearly cost                                         |
+| -------------------------------------------------------------------- | ---------------------------------------------------------------- |
+| Minimal financial consequences                                       | $0–$5                                                            |
+| Modest privacy-related exposure                                      | $5–$25                                                           |
+| Greater exposure to manipulation, unwanted purchases, or data misuse | $25–$100                                                         |
+| Serious privacy or identity-fraud incident                           | Potentially hundreds or thousands of dollars in an affected year |
+
+The $25 figure is a budgeting placeholder, not a prediction that Netflix will cause you $25 in annual losses.
+
+## What creates the risk?
+
+The most financially relevant provisions in Netflix's policy are:
+
+- Advertising and profiling: Netflix collects viewing behavior, device identifiers, interests, and information from advertising companies.
+- Data sharing: Netflix acknowledges activities that may qualify legally as selling or sharing personal information.
+- Data retention: Netflix does not promise one fixed deletion deadline for all categories of data.
+- Security incidents: Personal information could be exposed through a breach, although accepting the policy does not establish how likely that is.
+
+These risks are real categories of exposure, but there is no defensible way to assign Netflix-specific probabilities from the policy alone. General fraud statistics cannot establish that Netflix caused a loss.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.ftc.gov\&sz=32)
+
+Federal Trade Commission+1
+
+
+
+## How to reduce your exposure
+
+The most useful action is to visit [Netflix's Do Not Sell or Share page](https://www.netflix.com/dnsspi?utm_source=chatgpt.com) and review your privacy choices. Also turn off Behavioral Advertising in Account → Privacy and data settings, where available.
+
+The policy says these choices will not necessarily stop all advertising or reverse earlier data sharing.
+
+Bottom line: If you require one dollar figure, use $25 per year as a hypothetical privacy-risk allowance. If you want a figure justified by available evidence, the answer is unknown, not $25. The policy itself establishes neither a measurable annual loss nor an upper limit on possible harm.

@@ -1,0 +1,63 @@
+## What is the financial risk of accepting PayPal's privacy policy?
+
+My assessment: The direct annual cost is $0, but accepting the policy exposes you to privacy-related financial risks that could potentially cost hundreds or thousands of dollars if something goes wrong.
+
+Based on the PayPal Privacy Statement dated October 12, 2026, the policy does not establish an annual privacy fee, nor does it provide enough information to calculate your actual probability of financial loss.
+
+The distinction is important:
+
+- Guaranteed annual cost: $0 from accepting the privacy policy itself.
+- Expected annual financial loss: Unknown without reliable probabilities for data breaches, fraud, and other adverse events.
+- Potential loss in a serious incident: Could reach thousands of dollars, depending on the circumstances and protections available.
+
+The biggest concerns aren't ordinary marketing emails. They are how much financial information PayPal collects, how extensively it can be shared, and how long that information remains in its systems.
+
+## Where your money could be at risk
+
+| Risk identified in the policy                                                                   | Possible financial consequence                            |
+| ----------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
+| Sharing personal and financial information with third parties                                   | Greater exposure to identity theft or financial fraud     |
+| Retaining information for up to 10 years after the relationship ends, or longer where permitted | Prolonged exposure if retained information is compromised |
+| AI-based creditworthiness and fraud assessments                                                 | Potential restrictions on financial services              |
+| Tracking purchases and using information for personalized offers                                | Potential additional spending influenced by advertising   |
+| Sharing information through linked third-party accounts                                         | Additional exposure beyond PayPal's direct control        |
+
+These are potential consequences, not documented annual losses.
+
+## What would a yearly dollar estimate look like?
+
+For illustration, suppose there were a 1% annual chance of an incident causing you a $2,000 unreimbursed loss.
+
+Illustrative annual risk calculator
+
+Assumed annual incident probability
+
+1%
+
+Assumed unreimbursed loss per incident ($)
+
+EXPECTED ANNUAL LOSS
+
+# $20.00
+
+This is a hypothetical calculation, not an estimate of PayPal's actual risk. The policy provides neither incident probabilities nor expected unreimbursed losses.
+
+## What I would do before accepting
+
+The policy explicitly permits certain marketing-related disclosures, but it also provides ways to restrict them.
+
+1. Go to PayPal → Settings → Data and Privacy.
+2. Opt out of sharing your information with merchants for personalized shopping.
+3. Limit sharing with nonaffiliated companies for marketing.
+4. Unlink financial accounts and other services you no longer need.
+5. Enable two-factor authentication and transaction alerts.
+
+Importantly, PayPal states that it does not sell personal information or share it for targeted advertising in ways subject to non-exempt restrictions under comprehensive U.S. privacy laws. That qualification does not eliminate its other permitted data-sharing activities.
+
+## Bottom line
+
+There is no defensible specific annual dollar loss that can be assigned to accepting this policy alone. The most accurate estimate is $0 in mandatory annual fees, with an unknown financial risk that depends on how you use PayPal, your exposure to fraud, and the effectiveness of available protections.
+
+I would not reject PayPal solely because of this privacy statement, but I would disable optional data sharing. The privacy policy authorizes substantial data collection and processing, and its protections do not eliminate every financial risk.
+
+The important distinction is that accepting a privacy policy does not, by itself, mean agreeing to personally absorb every loss from an unauthorized transaction. Those liabilities are governed by separate agreements and applicable laws.

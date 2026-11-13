@@ -1,0 +1,39 @@
+Based on the Netflix Privacy Statement you provided (updated April 10, 2026), I would assign a rough planning estimate of $25 per year in personal financial privacy risk, with a plausible illustrative range of $5–$100 annually for an average subscriber.
+
+However, this is not a statistically established loss estimate. Netflix does not disclose enough information in this policy to calculate your actual expected financial loss. The $25 figure is a judgment-based estimate, not a measured probability of harm.
+
+## Estimated annual financial risk
+
+| Risk category                                            | Illustrative annual cost |
+| -------------------------------------------------------- | ------------------------ |
+| Targeted advertising influencing purchases               | $10–$40                  |
+| Financial exposure from data breaches or identity misuse | $0–$20                   |
+| Privacy loss from tracking and profiling                 | $0–$30                   |
+| Time spent managing unwanted marketing or privacy issues | $0–$10                   |
+| Overall planning estimate                                | $25/year                 |
+
+These categories are not independently measured, and the amounts should not be added together as though they were verified costs.
+
+## What makes this policy financially risky?
+
+Three provisions stand out:
+
+1. Advertising-related data sharing. Netflix acknowledges that certain uses of personal identifiers qualify as selling or sharing information under some state privacy laws.
+2. Tracking across websites. Cookies, device identifiers, and advertising technologies may collect information about your activities across different websites.
+3. Long-term storage. Netflix does not promise a universal deletion deadline. Retaining information longer can extend the period in which it could be exposed.
+
+The policy also provides privacy controls, and it does not establish that accepting it will cause you any financial loss.
+
+For perspective, the U.S. Bureau of Justice Statistics reported a $200 median financial loss among identity-theft victims who lost money in 2021. That statistic measures identity theft generally, not the risk attributable to Netflix.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://bjs.ojp.gov\&sz=32)
+
+Bureau of Justice Statistics
+
+
+
+## How to reduce your exposure
+
+Visit [Netflix's Do Not Sell or Share privacy controls](https://www.netflix.com/dnsspi?utm_source=chatgpt.com) and review your choices. You can also turn off Behavioral Advertising in your profile's Privacy and Data Settings, where available.
+
+Bottom line: Use $25 per year as a rough personal budgeting assumption if you need one number. The evidence does not support treating it as an actuarially calculated cost of accepting Netflix's policy. Your actual additional financial loss could be $0, and a serious privacy incident could cost substantially more.

@@ -1,0 +1,55 @@
+Based on OpenAI's September 10, 2026 U.S. Privacy Policy that you provided, there is no defensible way to calculate an exact annual dollar risk from the policy alone.
+
+However, I can put a dollar figure on a hypothetical risk scenario.
+
+ILLUSTRATIVE ANNUAL FINANCIAL RISK
+
+# $100/year
+
+A hypothetical estimate, not a measured loss or prediction.
+
+This assumes a 1% annual probability of a privacy incident causing a $10,000 financial loss:
+
+\\[ 0.01 \times \\$10,000 = \\$100 \\]
+
+Neither the probability nor the loss amount is established by the privacy policy.
+
+## What creates financial risk?
+
+The policy permits several practices that could create exposure:
+
+| Privacy concern                                                      | Potential financial consequence                                    |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| Collection of personal information, uploaded files and conversations | Identity theft or fraud if sensitive information is exposed        |
+| Disclosure to service providers and certain third parties            | Additional opportunities for unauthorized disclosure               |
+| Retention of certain information after deletion                      | Continuing exposure of retained information                        |
+| Use of content for model improvement, subject to your controls       | Possible exposure of confidential business or personal information |
+| Security protections that cannot guarantee absolute safety           | Potential recovery costs following a breach                        |
+
+The policy does not establish that these losses will occur. It also does not provide the incident probabilities needed to calculate their expected annual cost.
+
+## Estimate your risk based on what you share
+
+The following are hypothetical scenarios, not OpenAI-specific incident statistics.
+
+Annual probability of financial loss
+
+1%
+
+Loss if an incident occurs
+
+$10,000
+
+CALCULATED EXPECTED ANNUAL LOSS
+
+# $100/year
+
+This is a scenario calculator, not a statistical estimate of OpenAI's actual risk.
+
+## My assessment
+
+For someone using ChatGPT for general questions without sharing highly sensitive information, the potential financial consequences are likely lower than for someone uploading tax returns, banking records, medical records, or confidential business documents. The policy alone cannot establish a reliable dollar amount for either person.
+
+My recommendation: If you accept the policy, reduce your exposure by disabling model-training use of your conversations in Data Controls, using Temporary Chat for sensitive discussions, and avoiding uploads of information that could cause significant financial harm if disclosed.
+
+One question would help me give you a more meaningful personal dollar estimate: Do you use ChatGPT primarily for ordinary questions, or do you also share financial, medical, business, or other confidential information?

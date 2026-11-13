@@ -1,0 +1,48 @@
+## What is the annual financial risk of accepting X's Privacy Policy?
+
+My estimated risk allowance: $25–$100 per year for a typical X user, assuming ordinary personal use, no payment information stored, and no particularly sensitive information shared.
+
+That is a hypothetical financial risk allowance, not an actuarially established expected loss. The policy provides no statistics that would allow anyone to calculate a reliable personal dollar amount.
+
+The distinction matters: accepting the policy does not automatically cost you $25–$100 annually. The potential financial consequences come from the collection, use, sharing, and possible exposure of your personal information.
+
+### What the policy exposes you to
+
+The January 15, 2026 policy permits X to:
+
+- Track your activities: Collect device identifiers, location information, browsing interactions, and information received from advertising partners.
+- Use information for AI training: Use collected and publicly available information to help train machine-learning and AI models.
+- Share information with third parties: In some circumstances, recipients may use information for independent purposes, including AI training, unless you opt out.
+- Retain information: Keep account-related activity for the account's duration and some information longer for legal or security reasons.
+- Collect sensitive information: Depending on the features you use and your consent, this may include biometric, payment, and identity-related information.
+
+These provisions create privacy exposure, but they do not establish the likelihood of a financial loss.
+
+## Illustrative annual dollar-risk model
+
+Here is how a $50 annual allowance could be constructed. These are hypothetical assumptions, not measured X-specific probabilities.
+
+| Potential cost                              | Assumed annual probability | Assumed loss | Expected annual cost |
+| ------------------------------------------- | -------------------------- | ------------ | -------------------- |
+| Fraud facilitated by exposed personal data  | 1%                         | $2,000       | $20                  |
+| Account compromise and recovery             | 2%                         | $500         | $10                  |
+| Privacy-related inconvenience and lost time | 10%                        | $200         | $20                  |
+| Total                                       |                            |              | $50/year             |
+
+The largest uncertainty is attribution: even if you experience fraud, it may have nothing to do with X or its privacy policy. Actual incremental risk could be close to zero or substantially higher.
+
+For context, TransUnion reported that 16% of surveyed U.S. adults lost money to digital fraud in 2025, with a median reported loss of $2,307 among those losing money. That is an all-source digital fraud statistic, not an X-specific rate.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://newsroom.transunion.com\&sz=32)
+
+TransUnion Newsroom
+
+
+
+## My recommendation
+
+If you want one dollar figure for deciding whether to accept this policy, I would use $50 per year as a conservative personal budgeting assumption, while recognizing that the evidence does not establish $50 as your true expected loss.
+
+I would also disable unnecessary data sharing, precise location, contact syncing, and third-party AI-training permissions where the applicable settings allow. Avoid posting sensitive personal or financial information, including in direct messages.
+
+Bottom line: The more significant concern is not a predictable $50 annual bill. It is accepting ongoing data collection and sharing in exchange for a service, with a small but unquantifiable possibility of much larger financial or privacy harm.
