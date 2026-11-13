@@ -1,0 +1,32 @@
+Estimated annual financial risk of accepting LinkedIn's privacy policy
+
+# $25/year
+
+Illustrative personal risk allowance, not a statistically established expected loss.
+
+Based on the LinkedIn Privacy Policy effective November 3, 2025, I would use $25 per year as a rough budgeting estimate for privacy-related financial risk, assuming ordinary professional use and no unusually sensitive information shared.
+
+This is a judgment-based figure, not an amount that can be calculated from the policy itself.
+
+### Where the risk comes from
+
+| Risk category             | What the policy permits                                                                    |
+| ------------------------- | ------------------------------------------------------------------------------------------ |
+| Data breaches             | LinkedIn acknowledges it cannot guarantee your information's security.                     |
+| Advertising and profiling | LinkedIn collects behavioral data and infers characteristics such as compensation bracket. |
+| AI training               | Personal data may be used to develop and train AI models.                                  |
+| Third-party exposure      | Some profile information can be exported, shared, or retained outside LinkedIn.            |
+| Long-term exposure        | Some data remains available even after account closure.                                    |
+
+These risks could produce no financial loss in a given year, or occasionally a much larger loss. The policy provides neither incident probabilities nor loss amounts, so a defensible actuarial estimate is unavailable.
+
+### My assessment
+
+- Direct annual charge for accepting the policy: $0.
+- Illustrative annual privacy-risk allowance: $25.
+- Potential loss in a serious incident: Hundreds or thousands of dollars, depending on the circumstances.
+- Confidence in the $25 estimate: Low.
+
+Bottom line: I would not reject LinkedIn solely because of this privacy policy. Its professional networking benefits could outweigh the financial risks. However, I would disable unnecessary advertising personalization, AI training where the settings permit, contact syncing, and third-party data sharing.
+
+The most important distinction is that $25/year is a decision-making placeholder, not a verified monetary cost of accepting LinkedIn's policy.

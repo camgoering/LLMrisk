@@ -1,0 +1,45 @@
+Based on the PayPal Privacy Statement dated October 12, 2026, my estimated financial risk from accepting this policy is approximately $25–$100 per year for a typical U.S. consumer, assuming ordinary PayPal usage.
+
+However, this is a hypothetical risk estimate, not a statistically established loss rate. The policy itself provides no dollar figures, breach probabilities, or statistics sufficient to calculate your actual expected annual loss.
+
+Here's how I'd evaluate the financial exposure.
+
+## Estimated annual financial risk
+
+| Risk category                                               | Illustrative annual cost |
+| ----------------------------------------------------------- | ------------------------ |
+| Personalized advertising and potentially increased spending | $10–$50                  |
+| Privacy loss from tracking and information sharing          | $5–$20                   |
+| Identity theft and fraud exposure                           | $5–$20                   |
+| Automated decision-making errors or account restrictions    | $5–$10                   |
+| Total hypothetical annual cost                              | $25–$100                 |
+
+These amounts are illustrative assumptions, not independent, additive measurements. Privacy loss also isn't necessarily a direct cash expense, and fraud exposure can result in no loss or substantial losses depending on the circumstances.
+
+Importantly, the policy does not charge you $25–$100 annually. This estimate attempts to assign a monetary value to the possible disadvantages of accepting its data practices.
+
+## What concerns me most in this policy
+
+The policy explicitly allows PayPal to:
+
+- Collect detailed financial information: Including bank details, transaction histories, shopping behavior, and inferred income or creditworthiness.
+- Share information for marketing: Including with nonaffiliated third parties, subject to applicable restrictions and opt-outs.
+- Use personal information for AI training and automated decisions: Including decisions that could limit access to services.
+- Retain information after account closure: Generally for the duration of the relationship plus 10 years, subject to exceptions.
+- Share shopping preferences with merchants: Unless you exercise the applicable opt-out.
+
+These practices create potential financial and privacy exposure, but they do not establish how frequently consumers suffer monetary losses.
+
+## My recommendation
+
+Illustrative budgeting figure
+
+# $50/year
+
+Not an actuarial estimate or an amount documented by PayPal.
+
+I would use $50 annually as a rough personal budgeting assumption, not as a prediction of what accepting this policy will actually cost you. Your real incremental financial risk could be close to $0, and a serious incident could cost substantially more.
+
+You can reduce exposure without necessarily giving up PayPal by going to Settings → Data and Privacy, turning off optional personalized shopping data sharing, limiting nonaffiliate marketing sharing, and avoiding unnecessary linked accounts.
+
+Bottom line: The biggest concern is not a predictable annual charge. It is allowing a financial company to collect, analyze, retain, and share sensitive information in ways that could have financial consequences that are difficult to quantify.

@@ -1,0 +1,65 @@
+## What is the financial risk of accepting X's Privacy Policy?
+
+My estimate: $25–$150 per year in potential personal privacy-related financial risk for a typical X user.
+
+If you want one specific number for making a decision, I'd use:
+
+Illustrative annual risk estimate
+
+# $75/year
+
+Not a measured or statistically validated expected loss
+
+This is a judgment-based estimate, not a figure established by X's policy or published actuarial data. The actual financial cost could be $0 in most years, while an unusual identity-theft, fraud, or reputation-related incident could cost substantially more.
+
+Importantly, accepting the privacy policy does not itself obligate you to pay $75 or any other annual amount. The estimate represents possible indirect costs arising from privacy exposure.
+
+## Where the financial risk comes from
+
+The policy effective January 15, 2026, permits several uses of personal information that could create financial exposure.
+
+| Privacy provision                                      | Potential financial consequence                           | Risk level                         |
+| ------------------------------------------------------ | --------------------------------------------------------- | ---------------------------------- |
+| Tracking activity across websites and devices          | Profiling and targeted advertising                        | Moderate                           |
+| Collecting direct-message contents                     | Sensitive information exposure                            | Moderate                           |
+| Sharing information with third parties                 | Increased exposure to misuse or unwanted profiling        | Moderate–high                      |
+| Allowing certain third parties to train AI models      | Potentially persistent use of personal information        | Moderate–high                      |
+| Collecting payment, identity, and location information | Possible fraud consequences if information is compromised | High impact, uncertain probability |
+
+The most concerning language is in Section 3.2, which allows certain third-party recipients, unless you opt out, to use information for their independent purposes, potentially including training AI systems.
+
+Section 2.1 also permits X to use collected information and publicly available information for training its own AI models.
+
+Neither provision establishes how often users suffer financial losses.
+
+## How to interpret the $75 estimate
+
+An expected annual financial loss can be modeled as:
+
+\\[ \text{Annual risk}=\text{Probability of loss}\times\text{Size of loss} \\]
+
+For illustration, a 1% annual probability of a $7,500 loss produces an expected loss of $75 annually.
+
+That 1% probability is hypothetical. There is no reliable evidence in the supplied policy establishing the additional annual probability of fraud or other financial loss caused specifically by accepting it.
+
+For context, the FTC reported more than $12.5 billion in consumer fraud losses during 2024, but these losses cannot be attributed specifically to X's privacy practices.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.ftc.gov\&sz=32)
+
+Federal Trade Commission+1
+
+
+
+## My recommendation
+
+If you want to continue using X while reducing exposure, I would:
+
+1. Disable data sharing with business partners where available.
+2. Opt out of third-party AI training where X provides that control.
+3. Disable precise location sharing and unnecessary contact syncing.
+4. Avoid sharing financial or identity information in direct messages.
+5. Use a unique password and multifactor authentication.
+
+Bottom line: $75 per year is a possible planning assumption, not a defensible estimate of what accepting this policy actually costs you. The policy establishes meaningful privacy risks, but the evidence does not support converting those risks into a reliable individual annual dollar figure.
+
+I would be more concerned about the potential long-term loss of control over personal information than about a predictable $75 cash expense.

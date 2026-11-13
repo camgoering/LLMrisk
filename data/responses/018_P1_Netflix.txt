@@ -1,0 +1,30 @@
+ESTIMATED ANNUAL PRIVACY RISK — NETFLIX
+
+# $25/year
+
+Illustrative dollar value of privacy exposure, not a statistically established expected loss.
+
+After reviewing Netflix's April 10, 2026 privacy policy, I would use $25 per year as a provisional personal risk allowance, excluding your subscription cost. There isn't enough information in the policy to calculate a defensible actuarial dollar amount.
+
+### What creates the risk?
+
+| Privacy concern          | Financial implication                                                                  |
+| ------------------------ | -------------------------------------------------------------------------------------- |
+| Advertising profiling    | Your information helps support targeted advertising, potentially influencing purchases |
+| Third-party data sharing | Identifiers and certain location information may be shared for advertising             |
+| Data breaches            | Potential fraud, identity protection expenses, or time spent resolving problems        |
+| Long-term retention      | Personal information can remain exposed to future risks                                |
+
+The policy explicitly acknowledges that certain uses of identifiers may constitute selling or sharing personal information under US state privacy laws. It also describes collecting viewing activity, device identifiers, payment details, and advertising-related inferences.
+
+### How I would interpret the $25
+
+That figure is a budgeting assumption, not an amount Netflix charges, earns from your data, or is likely to cost you. Your actual incremental financial loss could be $0, while an unusual privacy or security incident could cost substantially more.
+
+Importantly, accepting the policy does not mean you will lose $25 annually. A true expected-loss calculation requires incident probabilities and financial consequences that Netflix does not disclose.
+
+### How to reduce your exposure
+
+Netflix provides an opt-out mechanism at [Do Not Sell or Share My Personal Information](https://www.netflix.com/dnsspi?utm_source=chatgpt.com). You can also disable behavioral advertising and matched-identifier marketing where those settings are available.
+
+Bottom line: My provisional dollar estimate is $25 per year, but the only defensible conclusion from the policy itself is that the financial risk is real, unquantified, and not necessarily an additional out-of-pocket cost.

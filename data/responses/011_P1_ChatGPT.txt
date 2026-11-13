@@ -1,0 +1,61 @@
+Based on the September 10, 2026 OpenAI Privacy Policy you provided, I would assign a hypothetical annual privacy-risk cost of $25–$100 for an average personal user, with a midpoint of $50 per year.
+
+However, this is a judgment-based estimate, not a statistically established cost or a figure disclosed by OpenAI. The policy doesn't provide enough information to calculate an individual's actual annual financial risk.
+
+The cost could be much higher if you routinely share financial records, medical information, confidential business documents, or other sensitive material.
+
+## Estimated annual financial exposure
+
+| Risk category                                     | Illustrative annual cost |
+| ------------------------------------------------- | ------------------------ |
+| Exposure of personal information                  | $15                      |
+| Unwanted marketing or profiling                   | $10                      |
+| Potential misuse of conversation content          | $15                      |
+| Time spent managing privacy settings or incidents | $10                      |
+| Total illustrative annual cost                    | $50                      |
+
+These allocations illustrate one way to value privacy exposure. They are not actuarial estimates or predictions of losses.
+
+## What concerns me most about this policy
+
+The policy allows OpenAI to:
+
+- Collect and process prompts, uploaded documents, and account information.
+- Use eligible conversation content for model improvement unless you opt out.
+- Share certain information with service providers, affiliates, and selected marketing partners.
+- Retain some information after deletion for legal, security, or other stated purposes.
+- Disclose information in specified legal, regulatory, and safety circumstances.
+
+These permissions create potential exposure, but they do not establish that a breach, misuse, or financial loss will occur.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://openai.com\&sz=32)
+
+OpenAI
+
+
+
+## Calculate your own risk estimate
+
+HYPOTHETICAL EXPECTED ANNUAL LOSS
+
+# $50/year
+
+Annual chance of an incident
+
+1%
+
+Financial loss if an incident occurs
+
+$5,000
+
+Expected annual loss = assumed incident probability × assumed financial impact. These inputs are illustrative; neither the policy nor available evidence establishes the actual probability for your account.
+
+## My recommendation
+
+If you use ChatGPT for ordinary questions, writing, and research, I would use $50 per year as a personal planning allowance for privacy risk, not as a measured expected loss.
+
+If you use it for sensitive financial, legal, medical, or business information, the potential financial consequences can be substantially higher, and I would not assign a reliable dollar estimate without knowing what information is involved.
+
+To reduce your exposure, turn off model-training use of conversations under Settings → Data Controls, avoid uploading unnecessary sensitive information, and use Temporary Chat when appropriate.
+
+Bottom line: There is no defensible, universal yearly dollar cost of accepting this privacy policy. My illustrative number is $50/year, but your actual expected financial loss could be substantially lower or higher, and the evidence does not establish where it falls.

@@ -1,0 +1,63 @@
+Based on Google's Privacy Policy effective October 16, 2026, there is no fixed annual dollar cost to accepting it. The main financial risks are indirect: targeted advertising influencing your spending, potential exposure of personal information, and the consequences of a data breach.
+
+If you want a single dollar figure for personal budgeting, I'd use $100 per year as a provisional risk allowance for an average user—not as a statistically established expected loss.
+
+That number is a planning assumption, not a charge from Google or a value stated in the policy. Your actual financial impact could be $0, considerably higher, or even a net benefit because of the services you receive.
+
+## How I'd assess the financial risk
+
+The main provisions that create potential financial exposure are:
+
+| Risk from the policy                               | Potential financial consequence                             |
+| -------------------------------------------------- | ----------------------------------------------------------- |
+| Personalized advertising based on your activity    | Additional spending influenced by targeted ads              |
+| Collection of location, browsing and purchase data | Potential privacy loss and misuse if information is exposed |
+| Storage of emails, documents and photos            | Financial harm if sensitive information is compromised      |
+| Sharing with processors and legal authorities      | Possible indirect costs from information disclosure         |
+| Long-term data retention                           | Continued exposure of stored information                    |
+
+None of these provisions establishes a measurable annual loss for an individual.
+
+For context, the FTC reported a $497 median loss among fraud reports in 2024, but that statistic covers fraud generally—not fraud caused by Google or its privacy policy.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.ftc.gov\&sz=32)
+
+Federal Trade Commission
+
+
+
+## Calculate your own annual risk allowance
+
+ILLUSTRATIVE ANNUAL RISK MODEL
+
+# $80 / year
+
+Assumed annual chance of a financial incident
+
+2%
+
+Hypothetical probability, not an observed Google incident rate.
+
+Financial loss if an incident occurs ($)
+
+Additional spending attributed to personalized advertising ($/year)
+
+Expected incident loss
+
+$20.00
+
+Advertising-related spending
+
+$60.00
+
+Reset assumptions
+
+These assumptions demonstrate how a dollar estimate can be calculated. They are not independently established risk probabilities or costs. The model also does not establish how much risk is caused specifically by accepting this policy.
+
+## My recommendation
+
+I would not reject Google's services solely on financial-risk grounds. Instead, I'd accept the policy only with privacy settings adjusted to minimize unnecessary collection and use of personal information.
+
+Start with [Google Privacy Checkup](https://myaccount.google.com/privacycheckup?utm_source=chatgpt.com) and [My Ad Center](https://myadcenter.google.com/?utm_source=chatgpt.com) to review your settings.
+
+Bottom line: $100 annually is a usable hypothetical budget allowance, but the evidence does not establish that accepting this policy actually costs you $100—or any other specific amount—each year. The most important risk may be loss of privacy rather than direct financial loss.
