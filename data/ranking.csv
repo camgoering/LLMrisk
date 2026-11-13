@@ -1,0 +1,7 @@
+service,llm_mean_usd_P1,llm_rank_P1,llm_mean_usd_P2,llm_rank_P2,team_calc_usd,team_rank
+ChatGPT,42,3,,,,
+Google,100,1,,,,
+LinkedIn,35,4,,,,
+Netflix,27,5,,,,
+PayPal,25,6,,,,
+X,53,2,,,,
