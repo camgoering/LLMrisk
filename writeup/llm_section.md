@@ -14,8 +14,9 @@ one publicly available chat model to estimate the annual dollar risk of acceptin
 each service's privacy policy, and repeated each request enough times to measure
 how stable its answers are.
 
-**Model and interface.** All runs used [product, model version as displayed] through
-its standard web interface on a [tier] account, between [start date] and [end date].
+**Model and interface.** All runs used ChatGPT (model shown in the interface as
+"GPT-6") through its standard web interface on a [tier] account, between
+2026-11-12 and [end date].
 We used the web interface rather than an API deliberately: it is what a consumer
 would use, and it applies the provider's default sampling settings. The interface
 does not expose temperature, system prompt or seed, so these were not controlled.
@@ -27,7 +28,8 @@ as plain text on 2026-11-11 and the same snapshot was used for every run, so the
 input did not change during collection. Sections applying only to non-US
 jurisdictions were removed where a policy included them inline (PayPal's UK/EEA,
 Mexico and Singapore disclosures); otherwise policies were used in full, between
-29,000 and 77,000 characters. [If the paste test forced a cutoff: state it here.]
+29,000 and 77,000 characters. The longest (PayPal) was accepted as a single message,
+so no policy was truncated.
 
 **Prompt conditions.** Each policy was presented under two prompts, reproduced in
 full in Appendix [X]:
@@ -51,11 +53,11 @@ question is asked.
 **Procedure.** Every run used a new chat, so no earlier answer could influence a
 later one. The prompt and policy were pasted as one message and only the first
 response was recorded: responses were never regenerated, followed up or rephrased.
-All P1 runs were collected on [date] and all P2 runs on [date]. Within each day,
+All P1 runs were collected on 2026-11-12 and all P2 runs on [date]. Within each day,
 runs were collected in five rounds, each covering all six services, so that any
 unannounced model update during collection would affect all services equally
 rather than whichever service happened to be running. Because the two prompts were
-run on consecutive days, a model update between them cannot be separated from the
+run on different days, a model update between them cannot be separated from the
 prompt effect; the model version shown in the interface was recorded on every run
 [and did / did not change]. One calibration run on PayPal opened each day's block
 and was excluded from analysis. In total there were [60] scored runs.
@@ -81,23 +83,84 @@ calculated risk. We also report the correlation between the P1 and P2 orderings.
 
 ## Results: LLM estimates
 
-**Table [N].** Annual risk estimates by service and prompt (scored runs only).
+### P1: the naive question
 
-| Service | Prompt | n | Mean (USD) | SD (USD) | CV | Min – Max | Refused |
+**Table [N].** Annual risk estimates under P1 (naive prompt), 2026-11-12, five
+scored runs per service (calibration run excluded).
+
+| Service | ToS;DR | Mean (USD) | Median | SD | CV | Min – Max | Refused |
 |---|---|---|---|---|---|---|---|
-| PayPal | P1 | | | | | | /5 |
-| PayPal | P2 | | | | | | /5 |
-| X | P1 | | | | | | /5 |
-| … | | | | | | | |
+| Google | E | 100 | 100 | 0 | 0.00 | 100 – 100 | 0/5 |
+| X | E | 53 | 50 | 35 | 0.66 | 15 – 100 | 0/5 |
+| ChatGPT | C | 42 | 25 | 36 | 0.84 | 10 – 100 | 0/5 |
+| LinkedIn | C | 35 | 25 | 14 | 0.39 | 25 – 50 | 0/5 |
+| Netflix | D | 27 | 25 | 14 | 0.53 | 10 – 50 | 0/5 |
+| PayPal | E | 25 | 25 | 18 | 0.71 | 0 – 50 | 0/5 |
 
-*(Source: `data/summary.csv` from `analyze.py`.)*
+*(Source: `data/summary.csv` from `analyze.py`; SD rounded to the nearest dollar.)*
 
-**Stability.** [Range of CV under P1 and under P2. How many of the twelve cells
-exceed 0.5. Whether P2's fixed format reduced variability relative to P1.]
+**The model always gave a number, and always disowned it.** None of the 30 P1
+responses was a refusal: each named a dollar figure. Yet every response (30/30)
+described its figure as illustrative, 27 stated explicitly that it was not a
+defensible, measured, actuarial or statistically established estimate, and 26
+framed it as a "budgeting allowance" or "placeholder" rather than an expected loss.
+Half (15/30) said outright that the policy does not contain enough information to
+calculate a dollar risk. The typical answer therefore did two things at once: it
+supplied the specific yearly figure the user asked for, and told the user not to
+rely on it.
 
-**Refusals.** [Refusal rate under P1 vs P2. What refusals looked like — e.g. a
-qualitative risk description with no number, or a statement that it cannot
-estimate.]
+**Figures came from a short menu of round numbers.** 27 of the 30 figures were
+exactly $10, $25, $50 or $100; $25 alone accounted for 12. The pooled median was
+$25 and the range $0–$100. Where the model showed its working, the itemized
+scenarios were constructed to sum to the round headline figure: one X response
+assumed a 1% chance of a $1,000 loss, 5% of $200 and 10% of $50, totalling exactly
+$25; another assumed 1% of $2,000, 2% of $500 and 10% of $200, totalling exactly
+$50. The probabilities and loss sizes were labelled as assumptions, not drawn from
+the policy. This pattern is more consistent with the model choosing a plausible
+figure and then illustrating it than with deriving a figure from the policy's
+content.
+
+**Stability.** Repeating the identical prompt on the identical policy produced
+figures that varied by up to a factor of ten (ChatGPT: $10 to $100; X: $15 to
+$100). Four of the six services had a CV above 0.5 (0.53–0.84), the threshold we
+set for treating a dollar estimate as not reproducible. Google was the exception:
+$100 in all five runs (CV 0). That is perfectly consistent, but since $100 was also
+the largest figure the model gave any service, it may reflect a ceiling on the
+menu rather than a policy-specific judgment. Mean figures did not trend across the
+five rounds (round means $38, $58, $50, $53, $37), and the interface showed the same
+model name throughout.
+
+**Ordering.** By mean, P1 ranks Google > X > ChatGPT > LinkedIn > Netflix > PayPal.
+This ordering is fragile: four of the six services share a median of $25, so their
+relative positions rest on one or two runs each (ChatGPT's mean, for example, is
+lifted by a single $100). PayPal, the service with the most direct access to
+financial data in our set, received the *lowest* mean. Its five figures include the
+one borderline response in the dataset (below).
+
+**What P1 priced.** Because P1 does not say what kind of harm to price, the model
+priced a broad mix: costs from targeted advertising and influenced spending
+(mentioned in 25/30 responses), identity theft or breach exposure (24/30), time
+spent dealing with privacy problems, and the effects of automated profiling. A P1
+figure is therefore not the same quantity as our identity-theft-based calculation,
+which is one reason P2 specifies the harm. 13 of 30 responses cited an external
+statistic (FTC, Federal Reserve or Bureau of Justice Statistics fraud figures), in
+each case noting that it could not be attributed to the specific service.
+
+**One borderline response.** One PayPal response stated that "the direct annual cost
+is $0" and called the remaining risk unquantifiable, alongside an explicitly
+hypothetical $20 calculation. Under our pre-set coding rules this is a single stated
+figure and was recorded as $0. Treating it as a refusal instead would raise PayPal's
+P1 mean from $25 to $31 and lower its CV from 0.71 to 0.40, without changing its
+position as the lowest-ranked service.
+
+### P2: the profiled question
+
+**Table [N+1].** [Same layout as Table N, for P2.]
+
+**Stability.** [CV range under P2; how many of six exceed 0.5; whether the fixed
+format reduced variability relative to P1.]
+
+**Refusals.** [P1 had none (0/30). P2: rate, and what refusals looked like.]
 
 **Effect of prompt.** [Ratio of P2 to P1 means per service. Spearman's rho between
 P1 and P2 orderings: high rho means phrasing moved magnitude but not order.]
@@ -134,6 +197,12 @@ calculation weights.]
   it has *lost* data), not that either is wrong. Zero-breach services (ChatGPT,
   Netflix) score $0 in our calculation by construction, which no policy-reading
   model would reproduce.
+- **Hedged compliance (from P1).** Asked naively, the model neither refused nor
+  committed: it produced the requested figure while stating, in nearly every
+  response, that the figure was not a real estimate. A user reading only the
+  headline number would come away with a precise-looking figure the model itself
+  says is unfounded; a user reading the caveats would come away with no number at
+  all. Either way, P1 does not deliver a usable risk estimate.
 - **Refusals as a design feature.** A model that declines to give a number may be
   behaving more responsibly than one that produces a confident figure.
 
@@ -164,8 +233,10 @@ class project, and limits that would remain with more resources.*
   further reducing what a rank correlation over six services can show.
 - **Small n.** Five repeats per cell gives a usable but imprecise standard
   deviation, and six services gives little power for a rank correlation.
-- **Manual transcription.** Figures were copied by hand; every logged figure can be
-  checked against the full response text kept in the run log.
+- **Manual coding.** Figures were read from free-text answers by one coder applying
+  fixed rules. An audit of all P1 rows against the saved responses found and
+  corrected three transcription slips (runs 8, 14, 15); each correction is noted in
+  the run log, and every logged figure can be checked against the full response.
 - **One synthetic profile.** P2 used US averages only, so we cannot say whether the
   model's estimate responds to the user's circumstances.
 - **Policy preparation.** Regional sections were trimmed from one policy only
