@@ -15,7 +15,7 @@ each service's privacy policy, and repeated each request enough times to measure
 how stable its answers are.
 
 **Model and interface.** All runs used ChatGPT (model shown in the interface as
-"GPT-6") through its standard web interface on a [tier] account, between
+"GPT-6") through its standard web interface on a paid Plus account, between
 2026-11-12 and [end date].
 We used the web interface rather than an API deliberately: it is what a consumer
 would use, and it applies the provider's default sampling settings. The interface

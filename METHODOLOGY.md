@@ -11,10 +11,10 @@ comparable to the team's own risk calculation.
 | Field | Value |
 |---|---|
 | Interface | Web UI (chat), not API |
-| Provider / product | *record exactly, e.g. ChatGPT, GPT-5.1* |
-| Model version string | *record what the UI displays; screenshot it once* |
-| Account tier | *free / Plus / Team* |
-| Dates of data collection | *fill in* |
+| Provider / product | OpenAI ChatGPT |
+| Model version string | GPT-6 (as displayed in the interface) |
+| Account tier | Plus (paid) |
+| Dates of data collection | P1: 2026-11-12 · P2: *fill in* |
 
 The web interface does not expose temperature, system prompt, or seed. Run-to-run
 variation therefore reflects whatever default sampling the provider applies, which
