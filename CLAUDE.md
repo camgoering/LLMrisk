@@ -100,15 +100,26 @@ source, and report a sensitivity analysis rather than a single point estimate.
 - [x] `analyze.py` excludes calibration, computes rho vs team with exact p
 - [x] Report section drafted (`writeup/llm_section.md`), results left blank
 
-**Not done**
+**Prompts v2.0 (Nov 18): starting runs again**
 
-- [x] `NEXT_STEPS.md` — the user's step-by-step guide for finishing; follow it
-- [ ] Fill the `Profiles` sheet with Jules's sourced figures (the team's defaults),
-      then rerun `python make_runs.py` to produce the P2 files
-- [ ] P1 block, day 1: runs 1–31 (run 1 = calibration + paste test)
-- [ ] P2 block, day 2: runs 32–62 (run 32 = calibration), after the profile is set
-      from aggregate survey results / team defaults
-- [ ] Analysis and write-up
+The group asked for an A–E risk grade (compared with ToS;DR's grade) and a check
+for whether the LLM cites ToS;DR. Both prompts now ask for a grade; P2 also has a
+`SOURCES:` line; `log_run.py` auto-detects ToS;DR mentions. The Nov 12 P1 run
+(v1.0, 31 runs, three slips corrected) is archived as a **pilot** in
+`data/archive/` and never pooled with v2.0. Run order is back to **interleaved**
+(P1 then P2 within each round), since all runs happen in one sitting.
+
+- [x] v1 data archived; fresh workbook with Risk Grade / Cites ToS;DR / Sources
+      columns, grade stats in Summary, grade-vs-ToS;DR Spearman in Comparison
+      (verified in LibreOffice against `analyze.py`)
+- [x] `make_runs.py --order interleaved` (default); `log_run.py` grade + ToS;DR;
+      `analyze.py` grades.csv, ToS;DR rate, recall check, grade-vs-dollar check
+- [x] METHODOLOGY, NEXT_STEPS, write-up restructured (pilot kept as its own subsection)
+- [ ] Profile values (team defaults or rounded survey mean; survey has only 5
+      responses, so not the median) → `python make_runs.py` → 62 of 62
+- [ ] 62 v2.0 runs
+- [ ] Audit rows against responses, analysis, write-up, LaTeX, clean handoff workbook
+- [ ] Slides: user is adding the team's current deck to the repo
 
 ## 6. Files
 
@@ -147,14 +158,14 @@ refusal rate 0.25, with a calibration row of 100000 correctly excluded.
    `Raw Response`. Refusal rate goes in the paper.
 4. **Paste the saved snapshot.** Never let the model browse to a URL — browsing makes
    the input uncontrolled and may fetch a different regional variant.
-5. **Run in rounds.** All of P1 on day 1, all of P2 on day 2 (a recorded deviation:
-   profile values weren't ready); within each day, five rounds of the six services. If the provider updates the model mid-collection, rounds
+5. **Run in rounds.** Each round = six services under P1, then the same six under
+   P2. Five rounds. If the provider updates the model mid-collection, rounds
    spread that drift evenly across services instead of confounding it with whichever
    service was being run at the time.
 
-**Decided with the group (Nov 12):** paste, not upload (recorded in METHODOLOGY
-§2); P2 stays as written in PROMPTS.md v1.0 (profile + identity-theft framing +
-five-line format); P1 on day 1, P2 on day 2.
+**Decided with the group:** paste, not upload (METHODOLOGY §2). Nov 18: add an A–E
+risk grade to both prompts and check for ToS;DR citations → prompts v2.0, runs
+restarted, interleaved order.
 
 ## 8. Decision rules — paste into METHODOLOGY.md before any runs
 
@@ -246,7 +257,9 @@ Not Camden's to fix, but they affect how his results should be framed:
 
 ## 11. Do this next
 
-Follow `NEXT_STEPS.md`. When the user says runs are done, start at its step 9.
+Follow `NEXT_STEPS.md`. When the user says v2 runs are done: audit every Run Log
+row against `data/responses/` (as was done for the pilot), run `analyze.py`, fill
+the write-up, then LaTeX + clean handoff workbook.
 
 ## 12. Environment
 

@@ -16,7 +16,8 @@ how stable its answers are.
 
 **Model and interface.** All runs used ChatGPT (model shown in the interface as
 "GPT-6") through its standard web interface on a paid Plus account, between
-2026-11-12 and [end date].
+[v2.0 collection date(s)]. A pilot of P1 without the grade question was run on
+2026-11-12 (see Pilot, below).
 We used the web interface rather than an API deliberately: it is what a consumer
 would use, and it applies the provider's default sampling settings. The interface
 does not expose temperature, system prompt or seed, so these were not controlled.
@@ -34,33 +35,39 @@ so no policy was truncated.
 **Prompt conditions.** Each policy was presented under two prompts, reproduced in
 full in Appendix [X]:
 
-- **P1 (naive)** — a single question, as an ordinary user might ask it: *"What's
-  the risk of accepting this privacy policy in terms of a specific yearly dollar
-  amount?"* followed by the policy text. No output format was requested.
+- **P1 (naive)** — the question an ordinary user might ask: *"What's the risk of
+  accepting this privacy policy in terms of a specific yearly dollar amount? Also
+  give it a risk grade from A (lowest risk) to E (highest risk)."* followed by the
+  policy text. No output format was requested.
 - **P2 (profiled)** — supplied the same user inputs our calculation takes (income,
   credit tier, available credit, savings, set to US averages; see §[profiles]),
   asked for the expected 12-month cost from identity theft or fraud enabled by the
   service's data, accounting for the probability that it occurs, and required a
-  fixed five-line answer containing a point estimate, a low and high bound, the
-  data types driving the estimate, and a one-sentence justification.
+  fixed seven-line answer: a point estimate, a low and high bound, a risk grade
+  (A–E), the data types driving the estimate, any outside sources relied on, and a
+  one-sentence justification.
+
+The grade lets the model's judgment be compared with an independent published
+rating, ToS;DR's A–E grade, without converting anything to dollars. The prompts
+never mention ToS;DR, and the grade scale is defined neutrally, so any mention of
+ToS;DR in a response comes from the model itself.
 
 The contrast tests whether the number a user receives depends on how carefully the
 question is asked.
 
-**Profiles.** P2 used a single synthetic profile set to published US averages
-([sources]). No participant data was ever sent to the model (see Ethics).
+**Profiles.** P2 used a single profile matching the inputs of our own calculation
+([values and sources]). No individual participant's data was ever sent to the model
+(see Ethics).
 
 **Procedure.** Every run used a new chat, so no earlier answer could influence a
 later one. The prompt and policy were pasted as one message and only the first
 response was recorded: responses were never regenerated, followed up or rephrased.
-All P1 runs were collected on 2026-11-12 and all P2 runs on [date]. Within each day,
-runs were collected in five rounds, each covering all six services, so that any
-unannounced model update during collection would affect all services equally
-rather than whichever service happened to be running. Because the two prompts were
-run on different days, a model update between them cannot be separated from the
-prompt effect; the model version shown in the interface was recorded on every run
-[and did / did not change]. One calibration run on PayPal opened each day's block
-and was excluded from analysis. In total there were [60] scored runs.
+Runs were collected in five rounds, each covering all six services under P1 and
+then P2, so that any unannounced model update during collection would affect all
+services and both prompts equally. The model version shown in the interface was
+recorded on every run [and did / did not change]. Two calibration runs on PayPal
+(one per prompt) checked the workflow beforehand and were excluded from analysis.
+In total there were [60] scored runs.
 
 **Coding responses.** Rules for turning responses into numbers were fixed before
 collection began, so that how an awkward response was handled could not depend on
@@ -68,7 +75,11 @@ the number it contained. A single figure was recorded as given. A range with no
 point estimate was recorded at its midpoint. Where several scenarios were given, we
 took the one described as most likely, or the lowest if none was. Monthly or
 lifetime figures were converted to annual. A response with no dollar figure was
-recorded as a refusal. Refusals are reported as a result, not discarded.
+recorded as a refusal. Refusals are reported as a result, not discarded. For the
+grade, a single letter was recorded as given; where two letters were offered without
+a choice, the lower-risk one; plus/minus modifiers were dropped. A response was
+coded as citing ToS;DR if it named the service, "Terms of Service; Didn't Read", or
+tosdr.org anywhere.
 
 **Measures.** For each service and prompt we report the mean and standard deviation
 of the annual figure, and the coefficient of variation (CV = SD / mean) as a
@@ -78,14 +89,34 @@ refusal rate per prompt. Because neither the model's figure nor ours has ground
 truth, our main comparison is of *ordering* rather than magnitude: Spearman's rank
 correlation between the services ordered by mean LLM estimate and ordered by our
 calculated risk. We also report the correlation between the P1 and P2 orderings.
+For the grade we report its distribution per service, agreement with the ToS;DR
+grade (exact and within one letter), and Spearman's rho between the mean grade and
+the ToS;DR grade. We report how often each prompt's responses mention ToS;DR, and
+whether those responses agree with ToS;DR more often than the rest, which would
+suggest the grade is recalled rather than derived from the policy. Finally, as an
+internal-consistency check, we report the run-level rank correlation between each
+response's dollar figure and its grade.
 
 ---
 
 ## Results: LLM estimates
 
-### P1: the naive question
+### P1: the naive question (v2.0)
 
-**Table [N].** Annual risk estimates under P1 (naive prompt), 2026-11-12, five
+**Table [N].** [Same layout as the pilot table below, plus modal grade and ToS;DR
+mentions.]
+
+[Stability, refusals, round-number pattern, hedging: check whether the pilot
+findings below hold up with the grade question added.]
+
+### Pilot: P1 without the grade question (v1.0, 2026-11-12)
+
+*Kept because it shows what the naive question alone produces, and because
+comparing it with v2.0 P1 shows whether adding the grade question changed the
+dollar figures. Never pooled with v2.0. Trim heavily for the paper.*
+
+
+**Table [P].** Pilot: annual risk estimates under P1 v1.0 (naive prompt), 2026-11-12, five
 scored runs per service (calibration run excluded).
 
 | Service | ToS;DR | Mean (USD) | Median | SD | CV | Min – Max | Refused |
@@ -174,6 +205,26 @@ that bar.]
 it named most often per service, and whether they correspond to the categories our
 calculation weights.]
 
+### Risk grades and ToS;DR
+
+**Table [N+2].** [Per service: ToS;DR grade; P1 and P2 grade distributions and mean
+grade; exact-match rate. Source: `data/grades.csv`.]
+
+**Agreement with ToS;DR.** [Spearman's rho, mean grade vs ToS;DR grade, P1 and P2
+(n = 6; ToS;DR has three E's and two C's, so rho is limited by ties). Exact and
+within-one agreement rates.]
+
+**Does the model cite ToS;DR?** [Share of P1 and P2 responses mentioning ToS;DR,
+with browsing off and ToS;DR never mentioned in the prompt. What P2's SOURCES line
+listed. Whether runs that mention ToS;DR match its grade more often than runs that
+don't.]
+
+**Grade vs dollar figure.** [Run-level Spearman between grade and dollar figure,
+per prompt. Do higher grades come with higher dollar estimates?]
+
+**Pilot vs v2.0.** [Did adding the grade question change P1's dollar figures?
+Compare pilot P1 and v2.0 P1 means per service.]
+
 ---
 
 ## Discussion
@@ -216,9 +267,12 @@ class project, and limits that would remain with more resources.*
 - **No ground truth.** No published source gives the true annual dollar risk of
   accepting a privacy policy. We can measure the model's consistency and its
   agreement with our calculation, but neither establishes that either is correct.
-- **Prompts run on separate days.** P1 and P2 were collected on consecutive days
-  rather than interleaved, so a model change between days would be confounded with
-  the prompt effect.
+- **ToS;DR is a reference, not ground truth.** ToS;DR grades rate a service's terms
+  as a whole, as judged by volunteers, not financial risk. Agreement with ToS;DR
+  shows the model's grade tracks a published consensus, not that either is
+  correct. Because ToS;DR grades are public, the model may have seen them in
+  training: a match can be recall rather than judgment, which is why we report
+  agreement separately for runs that do and do not mention ToS;DR.
 - **One model, one interface.** Results describe [model] as served through its web
   interface during [dates], not LLMs in general. The provider may update the model
   without notice; rounds spread this across services but cannot remove it.
@@ -247,8 +301,10 @@ class project, and limits that would remain with more resources.*
 
 ## Ethics
 
-We deliberately sent no participant data to the model. Every P2 run used a synthetic
-profile of published US averages. Our survey promises anonymity, and transmitting
+We deliberately sent no individual participant's data to the model. Every P2 run
+used one group-level profile ([US-average defaults / rounded survey means]); with
+only five survey responses a median would have been one person's actual answer, so
+we did not use it. Our survey promises anonymity, and transmitting
 participants' income, savings or credit details to a third-party AI service would
 have broken that promise. This points to a limitation of the approach itself, not
 just our study: a real user who wanted a personalised estimate would have to
@@ -259,4 +315,5 @@ measure privacy risk.
 
 ## Appendix: prompts
 
-Paste the P1 and P2 blocks from `prompts/PROMPTS.md` verbatim (version 1.0).
+Paste the P1 and P2 blocks from `prompts/PROMPTS.md` verbatim (version 2.0). If
+the pilot is reported, also give P1 v1.0 from `prompts/PROMPTS_v1.md`.

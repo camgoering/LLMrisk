@@ -20,8 +20,9 @@ P1 needs no profile, so its files are written even while the Profiles sheet is
 blank. P2 files are skipped (and marked PENDING in the schedule) until the profile
 row has values for income, credit tier, available credit and savings.
 
-Order follows METHODOLOGY.md §5: all of P1 first (one PayPal calibration run,
-then five rounds of the six services), then all of P2 the same way.
+Order follows METHODOLOGY.md §5. Default (--order interleaved): two PayPal
+calibration runs (P1, P2), then five rounds of [six services under P1, then the same
+six under P2]. With --order blocks: all of P1, then all of P2.
 
 Requires: openpyxl
 """
@@ -111,17 +112,30 @@ def fill(template, values):
     return text.replace("{{POLICY_TEXT}}", values["POLICY_TEXT"]), []
 
 
-def schedule():
-    """P1 block first (day 1), then P2 block (day 2) — see METHODOLOGY §5.
+def schedule(order="interleaved"):
+    """Run order — see METHODOLOGY §5.
 
-    Each block: one calibration run on PayPal (round 0), then five rounds of all
-    six services in fixed order.
+    interleaved (default): two PayPal calibration runs (P1, P2), then five rounds,
+        each = six services under P1, then the same six under P2. Spreads any model
+        drift evenly across services AND prompts. Needs the profile filled first.
+    blocks: all of P1 (one calibration + five rounds), then all of P2 the same way.
+        Use only if P1 must start before the profile values are available.
     """
     run_id = 0
+    if order == "blocks":
+        for p in TIER1_PROMPTS:
+            run_id += 1
+            yield run_id, 0, "Y", p, "PayPal"          # round 0 = calibration
+            for rnd in range(1, ROUNDS + 1):
+                for svc in TIER1:
+                    run_id += 1
+                    yield run_id, rnd, "N", p, svc
+        return
     for p in TIER1_PROMPTS:
         run_id += 1
-        yield run_id, 0, "Y", p, "PayPal"          # round 0 = calibration
-        for rnd in range(1, ROUNDS + 1):
+        yield run_id, 0, "Y", p, "PayPal"              # round 0 = calibration
+    for rnd in range(1, ROUNDS + 1):
+        for p in TIER1_PROMPTS:
             for svc in TIER1:
                 run_id += 1
                 yield run_id, rnd, "N", p, svc
@@ -130,6 +144,9 @@ def schedule():
 def main():
     ap = argparse.ArgumentParser(description=__doc__.split("\n\n")[0])
     ap.add_argument("--profile", default="US_AVG")
+    ap.add_argument("--order", choices=("interleaved", "blocks"), default="interleaved",
+                    help="interleaved (default): P1 and P2 alternate within each round; "
+                         "blocks: all P1 first, then all P2")
     args = ap.parse_args()
 
     prompts = load_prompts(PROMPTS)
@@ -141,7 +158,7 @@ def main():
         os.remove(old)                      # never leave a stale file to paste
 
     rows, pending = [], set()
-    for run_id, rnd, calib, p, svc in schedule():
+    for run_id, rnd, calib, p, svc in schedule(args.order):
         text, missing = fill(prompts[p], {**profile, "POLICY_TEXT": policies[svc]})
         fname = f"{run_id:03d}_{p}_{svc}.txt"
         if text is None:

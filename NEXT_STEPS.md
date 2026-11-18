@@ -1,10 +1,13 @@
-# Finishing the LLM portion — step by step
+# Finishing the LLM portion — step by step (prompts v2.0)
 
-Everything is set up. What's left is the ChatGPT runs (only you can do these), then
-analysis and write-up (Claude can do most of it).
+**What changed (Nov 18):** both prompts now also ask for a **risk grade A–E**, P2
+also asks for its **sources**, and every answer is checked for a **ToS;DR**
+mention. That means starting the runs again. The first P1 run (Nov 12) isn't
+wasted: it's kept as a **pilot** in `data/archive/` and shows whether adding the
+grade question changes the dollar figures.
 
-**Plan: P1 today (runs 1–31, ~1 hour), P2 tomorrow (runs 32–62, ~1 hour)** once the
-profile values are settled from the survey results.
+**Plan:** all 62 runs in one sitting (or two close together), P1 and P2
+**alternating within each round**, about 1.5–2 hours with the helper.
 
 Tick boxes as you go.
 
@@ -16,240 +19,135 @@ In PowerShell, in the `LLMrisk` folder:
 
 ```powershell
 git pull
-python make_runs.py
 ```
 
-Until the Profiles sheet is filled it writes the 31 P1 files only; that's expected.
+`data/llm_run_log.xlsx` is now a **fresh, empty** workbook with three new Run Log
+columns: Risk Grade, Cites ToS;DR, Sources (P2). Your old runs are in
+`data/archive/llm_run_log_v1_pilot.xlsx`.
 
 - [ ] `git pull` done
-- [ ] `make_runs.py` runs (31 of 62 until Profiles is filled)
 
-## Step 1 — Get the profile figures from Jules
+## Step 1 — Profile values (5 min)
 
-Under the division of labor, sourcing the US averages is Jules's job. The team's
-calculation uses the same figures as its survey defaults, which is what makes your
-P2 numbers comparable to theirs. Ask Jules (or whoever owns the team's defaults)
-for these four values **and their sources**:
+Open `data/llm_run_log.xlsx` with `start data\llm_run_log.xlsx`. On the
+**Profiles** sheet, row `US_AVG`, fill in:
 
-| Profiles column | Team default it must match |
+| Column | What |
 |---|---|
-| Annual Income (USD) | "Default is U.S. avg wage" |
-| Credit Tier | "Estimated Credit Score Quadrant… Default is U.S. avg": which quadrant (Poor / Fair / Good / Excellent) |
-| Available Credit (USD) | whatever the team's calculation uses for that tier ("Default is average U.S. credit limit") |
-| Savings (USD) | "Default is U.S. avg savings" |
+| Annual Income (USD) | the value the team's calculation uses |
+| Credit Tier | the credit-score quadrant (Poor / Fair / Good / Excellent) |
+| Available Credit (USD) | the team's credit limit for that quadrant |
+| Savings (USD) | the value the team's calculation uses |
+| Source / citation | where each number came from |
 
-Type them into `data/llm_run_log.xlsx` → **Profiles**, row `US_AVG`, with the
-sources in column F. Save, close, then:
+**Use the same values as the team's calculation**, or the comparison doesn't hold.
+
+**With only 5 survey responses:** don't use the median, because with five people
+the median is one person's actual answer. Use the team's US-average defaults, or the
+rounded mean, and never an individual's answers.
+
+Save, **close Excel**, then:
 
 ```powershell
 python make_runs.py
 ```
 
-Now it should say **62 of 62**.
+It should say **62 of 62 run files written**.
 
-If the team's credit figure is still the planning doc's table ($0 / $500 / $1,000 /
-$1,500, no source), use whatever they actually settle on. Your job is to match
-their inputs, not fix them.
+- [ ] Profile filled with sources
+- [ ] `make_runs.py` says 62 of 62
 
-**P1 doesn't need these, so start P1 now.** P2 (day 2) does. See step 6.
+## Step 2 — ChatGPT setup (2 min)
 
-- [ ] Figures + sources from Jules
-- [ ] Typed into Profiles; `make_runs.py` says 62 of 62
+Same as before: same model (it said **GPT-6** last time; if it shows something
+else, use that and tell Claude), **Temporary Chat**, Memory and chat history off,
+no web search.
 
-## Step 2 — Set up ChatGPT (5 min, once)
+- [ ] Model name noted
 
-1. Decide which model you'll use and **stick with it for all 62 runs**. Pick it in
-   the model menu and take a screenshot showing the model name. Save it as
-   `data/model_screenshot.png`.
-2. Settings → Personalization:
-   - **Memory: off**
-   - **Reference chat history: off**
-   - **Custom instructions: blank**
-3. Simplest option: use **Temporary Chat** for every run (the toggle at the top of
-   a new chat). It never uses memory and doesn't clutter your history.
-4. Don't turn on web search.
-5. Fill in the table in `METHODOLOGY.md` §1: product, model name as shown, account
-   tier (free/Plus), and the date you start.
+## Step 3 — Run them
 
-- [ ] Model chosen + screenshot saved
-- [ ] Memory / chat history / custom instructions off
-- [ ] METHODOLOGY §1 filled in
-
-## Step 3 — Run them with the helper (recommended, ~30–45 s per run)
-
-**Close the workbook in Excel first.** Then in PowerShell:
+**Close the workbook in Excel**, then:
 
 ```powershell
 python log_run.py
 ```
 
-The first time, it asks for the model name exactly as ChatGPT shows it. After that it
-remembers it from the last row. For each run:
+For each run:
 
-1. It says which run is next and **puts the prompt on your clipboard**.
-2. In ChatGPT: **new Temporary Chat → Ctrl+V → Enter.** Wait for the whole answer.
-   Don't regenerate or reply.
-3. Click ChatGPT's **copy button** under the answer, go back to PowerShell and press
-   **Enter**. The script reads the answer from the clipboard.
-4. **P2:** it shows the numbers it read from the five-line answer. Press Enter if
-   they're right.
-   **P1:** it lists the dollar amounts it found. Type the one the decision rules
-   pick (below). You can type a range like `50-500` (it records the midpoint and
-   notes it) or `R` for a refusal.
-5. Optional note, then Enter. The row is written to the Run Log, and the answer is
-   also saved to `data/responses/`.
-6. Enter for the next run, or `q` to stop. Running `python log_run.py` again
-   carries on where you left off. `python log_run.py --status` shows progress.
+1. The prompt is on your clipboard. **New Temporary Chat → Ctrl+V → Enter.** Wait
+   for the whole answer. Don't regenerate or reply.
+2. Click ChatGPT's **copy button**, go back to PowerShell, press **Enter**.
+3. **Dollar figure:**
+   - **P2:** it reads the seven-line answer. Press Enter if it's right.
+   - **P1:** it lists the dollar amounts. Type the one the rules pick: a number, a
+     range like `50-500` (no point estimate), or `R`.
+4. **Grade** (new):
+   - **P2:** it reads `RISK_GRADE`. Press Enter if it's right.
+   - **P1:** it lists grade mentions and suggests one. Press Enter or type a letter.
+     Leave blank if there's no grade.
+5. **ToS;DR** (new): it checks automatically. If it finds a mention, it shows you
+   the passage, and you press Enter to count it. If not, it says "not mentioned"
+   and moves on.
+6. Optional note, Enter. The row is written and the answer saved to
+   `data/responses/`.
+7. Enter for the next run, or `q` to stop. Running `python log_run.py` again
+   picks up where you left off.
 
-At the end of each round it tells you. That's the moment to open the workbook,
-glance at the Summary sheet, and **close it again** before continuing.
+**Order:** runs 1–2 are calibration (PayPal P1, PayPal P2, not counted). Then
+five rounds of 12: six services under P1, then the same six under P2.
 
-If the clipboard doesn't work for some reason, `python log_run.py --no-clipboard`
-does the same thing, but you open the run file yourself and paste the answer into
-PowerShell, ending with a line that says `END`.
-
-## Step 3b — Doing a run by hand (fallback only)
-
-
-
-Open `runs/SCHEDULE.csv` in Excel next to `data/llm_run_log.xlsx`. Go down the
-schedule in order. For each row:
-
-1. **New chat** (Temporary Chat). Never reuse a chat.
-2. Open the run's file from `runs/` in Notepad, e.g. `runs/003_P1_PayPal.txt`.
-3. **Ctrl+A, Ctrl+C**, click in ChatGPT, **Ctrl+V**, **Enter**.
-4. Wait for the full answer. **Don't regenerate, don't reply, don't edit.**
-5. Copy the whole answer (the copy icon under the response).
-6. Log it in `data/llm_run_log.xlsx` → **Run Log**, one row per run:
-
-| Column | What to put |
+| Round | Runs |
 |---|---|
-| Run ID | the `run_id` from SCHEDULE.csv |
-| Date | today, e.g. 2026-11-13 |
-| Model Version | exactly as in your screenshot |
-| Prompt | P1 or P2 (dropdown) |
-| Service | dropdown |
-| Profile | `US_AVG` |
-| Annual Risk USD | the number — see decision rules below |
-| Low USD / High USD | P2 gives these; P1 only if it gives a range |
-| Refused | `Y` if no dollar figure at all, otherwise `N` |
-| Truncated | `N` (unless step 4 below says otherwise) |
-| Top Data Types | P2's TOP_DATA_TYPES line; blank for P1 |
-| Raw Response | **paste the whole answer** — see tip below |
-| Notes | anything odd: `midpoint`, `converted from monthly`, `searched`… |
-| Round | the `round` from SCHEDULE.csv (0 for runs 1 and 32) |
-| Calibration | `Y` for runs 1 and 32, `N` for everything else |
+| Calibration | 1–2 |
+| 1 | 3–14 |
+| 2 | 15–26 |
+| 3 | 27–38 |
+| 4 | 39–50 |
+| 5 | 51–62 |
 
-7. Close the chat. Next row.
+At the end of each round it tells you, and you can open the workbook to check the
+Summary sheet (close it again before continuing).
 
-**Excel tip for Raw Response:** if you just click a cell and paste, a multi-line
-answer gets split across many rows. Instead, **click the cell, then click in the
-formula bar at the top** (or press **F2**), then paste. It all goes into one cell.
+- [ ] Calibration (1–2)
+- [ ] Round 1 (3–14)
+- [ ] Round 2 (15–26)
+- [ ] Round 3 (27–38)
+- [ ] Round 4 (39–50)
+- [ ] Round 5 (51–62)
 
-**Decision rules** (full list in `METHODOLOGY.md` §9 — don't improvise):
+**Short on time?** Stop after round 3 (run 38). Three repeats still gives a
+standard deviation. Don't drop services.
 
-- One number → that's Annual Risk USD.
-- A range only (e.g. "$50–$500") → Low = 50, High = 500, Annual = 275 (the
-  midpoint), Notes: `midpoint`.
-- Several scenarios → the one called "most likely"/"typical"; if none, the lowest.
-  Note it.
-- Monthly → ×12. Lifetime → convert to annual. Note it.
-- No number at all → Refused = Y, dollar cells blank, still paste the response.
+### Decision rules (full list in `METHODOLOGY.md` §9)
 
-## Step 4 — Day 1, P1: calibration (run 1, 2 min)
+**Dollars:** one figure → that. A range plus a stated single figure → the single
+figure (and the range as low/high). A range only → type it as `50-500` (midpoint is
+recorded). Several scenarios → "most likely"/"typical", else the lowest. Monthly
+→ ×12. No number → `R`. Illustrative or hypothetical figures aren't the estimate.
+Use the stated one and note `illustrative $X`. Same note every time for the $0
+pattern: `$0 direct; risk unquantified`.
 
-PayPal P1. It tests the workflow and is **not counted**.
+**Grade:** one letter → that. Two letters (C/D) → the **lower-risk** one, noted.
+D+ → D, noted. No grade → blank.
 
-- If ChatGPT says the message is **too long**: stop and send Claude the exact
-  error. METHODOLOGY §2.4 covers this (a fixed cutoff for every service), and the
-  run files will need regenerating.
-- Check the Summary sheet: PayPal P1 should still show **n = 0**. That proves
-  calibration rows are being excluded.
-
-- [ ] Run 1 logged (Round 0, Calibration = Y); no "too long" error
-
-## Step 5 — Day 1, P1: rounds 1–5 (runs 2–31, about 50 min)
-
-One round = the six services in order (PayPal, X, Google, ChatGPT, Netflix,
-LinkedIn). After round 1, check the Summary sheet: each P1 row should show n = 1
-(or a refusal). Look only for **procedure** problems. **Don't change anything
-because of the numbers.**
-
-- [ ] Round 1 (runs 2–7)
-- [ ] Round 2 (runs 8–13)
-- [ ] Round 3 (runs 14–19)
-- [ ] Round 4 (runs 20–25)
-- [ ] Round 5 (runs 26–31)
-
-Note the model name ChatGPT shows. It should be the same tomorrow.
-
-## Step 6 — Day 2, P2: profile, calibration, rounds 1–5 (runs 32–62)
-
-1. Put the profile values into **Profiles** (row `US_AVG`), with where each came
-   from in column F. If they come from the survey, use **group-level figures**
-   (e.g. the median income across respondents), never one person's answers.
-   Sending a participant's own answers to ChatGPT would break the survey's
-   anonymity promise.
-2. Save, close, run `python make_runs.py`. It should now say **62 of 62**.
-3. Run 32 = P2 calibration (Round 0, Calibration = Y). If the answer doesn't come
-   back in the five-line format, note it and carry on; the decision rules handle it.
-4. Rounds 1–5: runs 33–38, 39–44, 45–50, 51–56, 57–62.
-5. Confirm the model name is the same as yesterday. If it changed, write both in
-   METHODOLOGY §1. That goes in the limitations.
-
-- [ ] Profile filled; `make_runs.py` says 62 of 62
-- [ ] Run 32 (calibration)
-- [ ] Rounds 1–5 (runs 33–62)
-
-**Short on time?** Stop each block after round 3 (P1: run 19; P2: run 50). Three
-repeats still gives a standard deviation. Note it in the write-up. Don't drop
-services.
-
-Fill in the collection dates in METHODOLOGY §1.
-
-## Step 7 — Get the team's six numbers
-
-Ask the team for their calculated annual risk (USD) for PayPal, X, Google,
-ChatGPT, Netflix and LinkedIn, using the profile numbers from step 1. Type them
-into **Comparison** column D. Spearman's rho appears in cell B21.
-
-If they aren't ready, skip this step. You can hand over the workbook and they fill
-in column D themselves.
-
-- [ ] Team figures entered (or skipped)
-
-## Step 8 — Push and hand back to Claude
+## Step 4 — Push and hand back to Claude
 
 ```powershell
-git add data/llm_run_log.xlsx data/model_screenshot.png METHODOLOGY.md
-git commit -m "Runs complete"
+git add data/llm_run_log.xlsx data/responses METHODOLOGY.md
+git commit -m "v2 runs complete"
 git push
 ```
 
-Then start a Claude session on this repo and say:
+Then tell Claude: **"v2 runs are done and pushed."** Claude will audit every row
+against the saved answers, run the analysis, finish the write-up, convert it for
+the report, and make the clean handoff workbook.
 
-> Runs are done and pushed. Continue from NEXT_STEPS step 9.
+## Step 5 — The team's figures
 
-## Step 9 — What Claude does next (you review)
+The team's six dollar figures go in **Comparison** column D (Spearman for dollars
+appears in B21). The grade comparison with ToS;DR fills itself in (B24).
 
-1. Runs `analyze.py` and checks the log for anything breaking the decision rules
-2. Fills every `[blank]` in `writeup/llm_section.md` with the real numbers, tables
-   and discussion
-3. Converts the section to LaTeX for John's report (or Word if the team prefers)
-4. Makes a clean handoff copy of the workbook (working instructions removed, a short
-   "what each sheet is" note added)
-5. Optionally a chart or two for the presentation (CV by service, LLM vs team rank)
+## Step 6 — Hand off to the team
 
-## Step 10 — Hand off to the team
-
-Two files:
-
-1. **The workbook** — all runs, summary statistics, comparison
-2. **The report section** (LaTeX or Word) — methods, results, limitations, ethics,
-   prompts in the appendix
-
-## For the presentation (Nov 17 / 19 / 24 — live demo)
-
-A good live demo takes 60 seconds: open a fresh Temporary Chat, paste one P2 run
-file, show the answer, then open the Summary sheet to show how much that number
-varies across five runs. The variability is the point. Don't log the demo run.
+Two files: the workbook and the report section.

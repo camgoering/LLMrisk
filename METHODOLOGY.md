@@ -14,7 +14,7 @@ comparable to the team's own risk calculation.
 | Provider / product | OpenAI ChatGPT |
 | Model version string | GPT-6 (as displayed in the interface) |
 | Account tier | Plus (paid) |
-| Dates of data collection | P1: 2026-11-12 · P2: *fill in* |
+| Dates of data collection | v2.0 (main): *fill in* · v1.0 pilot (P1 only): 2026-11-12 |
 
 The web interface does not expose temperature, system prompt, or seed. Run-to-run
 variation therefore reflects whatever default sampling the provider applies, which
@@ -69,14 +69,16 @@ Policies change. Every run must use a frozen copy, not a live page.
 
 ## 3. Profiles
 
-All profiles are **synthetic**, set to published US averages. Values and sources
-live in the `Profiles` sheet of `data/llm_run_log.xlsx` and come from Jules's source
-research — fill them there, not here, so there is one authority for each figure.
+P2 uses one profile (`US_AVG` row of the `Profiles` sheet): income, credit tier,
+available credit, savings, each with its source in column F. The values must be the
+same ones the team's own calculation uses, or the comparison does not hold.
 
-No real participant data is ever sent to the model. This is deliberate: the survey
-promises anonymity, and transmitting participant financial details to a third-party
-service would break that promise. State this explicitly in the paper's ethics
-section — it converts a limitation the team identified into a design decision.
+**No individual participant data is ever sent to the model.** The survey promises
+anonymity, and transmitting a participant's financial details to a third-party
+service would break that promise. If profile values are derived from the survey,
+they are group-level figures. With only five responses, a median *is* one person's
+answer, so use the team's US-average defaults or a rounded mean instead. State this
+in the ethics section: it turns a limitation into a design decision.
 
 ## 4. Run matrix
 
@@ -91,6 +93,12 @@ prompt conditions, five repeats:
 | ChatGPT | C | AI service, mid |
 | Netflix | D | low-mid |
 | LinkedIn | C | lowest in our exposure scoring |
+
+**Prompt version.** Main collection uses prompts v2.0 (`prompts/PROMPTS.md`), which
+add an A–E risk grade to both prompts and a sources line to P2. A complete P1 run
+under v1.0 (no grade question; 2026-11-12) is kept as a **pilot** in
+`data/archive/`. It is never pooled with v2.0, but comparing pilot P1 with v2.0 P1
+shows whether adding the grade question moved the dollar figures.
 
 **Tier 2 (if time) —** the remaining seven services, P2 only, three repeats each.
 
@@ -132,22 +140,18 @@ One run per row. Fill `Run ID` sequentially so nothing is silently overwritten.
 
 ### Order of runs
 
-- **P1 block, then P2 block.** All P1 runs are collected on day 1 and all P2 runs on
-  day 2, because P2's profile values were not available on day 1. *This is a
-  deviation from the original plan of interleaving P1 and P2 within each round:* if
-  the provider updates the model between the two days, that change is confounded
-  with the prompt difference. Mitigation: the model version shown in the interface
-  is recorded on every run, and both blocks are collected on consecutive days.
-- **Calibration first, in each block.** One PayPal run opens each block (run 1 for
-  P1, run 32 for P2) to confirm the workflow end to end (input accepted, output
-  parseable, logging works). Calibration runs are logged with `Calibration = Y`
-  and excluded from every statistic. Prompts are not revised after calibration
-  unless the output is unusable; any revision becomes a new version (e.g. P2.1)
-  and the calibration is repeated.
-- **Rounds within each block.** One round = all six Tier 1 services under that
-  prompt. Five rounds per prompt. Record the round number in `Round`. Within a
-  day, rounds spread any drift evenly across services instead of confounding it
-  with whichever service was being run at the time.
+- **Calibration first.** Two PayPal runs (run 1 = P1, run 2 = P2) confirm the
+  workflow end to end: input accepted, output parseable, logging works. They are
+  logged with `Calibration = Y`, Round 0, and excluded from every statistic. Prompts
+  are not revised after calibration unless the output is unusable; any revision
+  becomes a new version and the calibration is repeated.
+- **Rounds, P1 and P2 interleaved.** One round = all six Tier 1 services under P1,
+  then the same six under P2 (twelve runs). Five rounds. Record the round number in
+  `Round`. If the provider updates the model mid-collection, rounds spread the drift
+  evenly across services *and* prompts instead of confounding it with whichever
+  service or prompt was running at the time. (`make_runs.py --order blocks` exists
+  for the case where P1 must start before the profile is available; using it is a
+  deviation and must be recorded here.)
 - Service order within a round is fixed: PayPal, X, Google, ChatGPT, Netflix,
   LinkedIn. The full schedule is generated by `make_runs.py` (`runs/SCHEDULE.csv`).
 - After round 1, check the Summary sheet for problems with the *procedure* (e.g.
@@ -173,6 +177,22 @@ Report at minimum:
 - Spearman correlation between the LLM's service ranking and the team's ranking.
   Comparing *rankings* is far more robust than comparing point estimates, and it
   survives the objection that neither dollar figure has ground truth.
+- **Risk grade (v2.0):** grade distribution and mean grade (A = 1 … E = 5) per
+  service × prompt; exact-match and within-one-letter agreement with the ToS;DR
+  grade; Spearman between the LLM's mean grade and the ToS;DR grade (six services,
+  with ties in ToS;DR: E, E, E, D, C, C).
+- **ToS;DR as a source (v2.0):** share of responses per prompt that mention ToS;DR.
+  The prompts never mention it and browsing is off, so a mention comes from the
+  model's training data. Compare grades in runs that cite ToS;DR with those that do
+  not: if citing runs match ToS;DR far more often, the model's grade may be recalled
+  rather than judged from the policy.
+- **Internal consistency (v2.0):** run-level Spearman between the dollar figure and
+  the grade. A model whose E grades come with small dollar figures is not using one
+  coherent notion of risk.
+
+The `Summary` and `Comparison` sheets compute the grade counts, mean grade, ToS;DR
+mention rate and grade-vs-ToS;DR Spearman; `analyze.py` adds agreement rates, the
+consistency check and `data/grades.csv`.
 
 ## 7. Limitations specific to this portion
 
@@ -234,6 +254,21 @@ response cannot be influenced by what number it contains.
 - **P2/P3 format not followed but a figure is given** → apply the rules above to the
   prose; note `format not followed`.
 - **Never** regenerate, follow up, or rephrase to get a number.
+
+**Risk grade (v2.0):**
+
+- One letter A–E → record it.
+- Two letters with no single choice (e.g. "C/D", "C–D") → record the lower-risk
+  letter and note `several grades mentioned`. (This mirrors the "take the lowest"
+  rule for dollar scenarios.)
+- Plus/minus (e.g. "D+") → record the letter only; note it.
+- No grade at all → leave blank and note `no grade`. This is separate from a dollar
+  refusal: a run can have a figure and no grade, or a grade and no figure.
+
+**Cites ToS;DR (v2.0):** `Y` if the response names ToS;DR, "Terms of Service; Didn't
+Read" or tosdr.org anywhere, in any spelling; otherwise `N`. `log_run.py` detects
+this automatically and shows the passage for confirmation. For P2, the model's
+`SOURCES:` line is recorded verbatim in `Sources (P2)`.
 
 **Policy text rule:** use the full policy text, excluding sections that apply only to
 non-US jurisdictions in regionally segmented policies. Nav menus and site footers

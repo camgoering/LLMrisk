@@ -10,9 +10,10 @@ Per run:
     1. The script copies the run's prompt to your clipboard.
     2. Open a NEW chat (Temporary Chat), Ctrl+V, Enter. Wait for the full answer.
     3. Click ChatGPT's copy button under the answer, come back here, press Enter.
-    4. The script reads the answer from the clipboard, pulls out the numbers
-       (P2: from the five-line format; P1: you pick, using the decision rules),
-       and writes the Run Log row itself.
+    4. The script reads the answer from the clipboard, pulls out the dollar figure
+       and the A–E risk grade (P2: from the seven-line format; P1: you pick, using
+       the decision rules), checks for any ToS;DR mention, and writes the Run Log
+       row itself.
 
 The ChatGPT step stays manual on purpose — see METHODOLOGY.md §5. Nothing here
 talks to ChatGPT.
@@ -49,7 +50,8 @@ EXCEL_CELL_MAX = 32767
 
 # Run Log columns (1-based)
 COL = dict(run_id=1, date=2, model=3, prompt=4, service=5, profile=6, usd=7, low=8,
-           high=9, refused=10, truncated=11, top=12, raw=13, notes=14, round=15, calib=16)
+           high=9, refused=10, truncated=11, top=12, raw=13, notes=14, round=15, calib=16,
+           grade=17, tosdr=18, sources=19)
 
 
 # ---------------------------------------------------------------- clipboard
@@ -119,7 +121,40 @@ def parse_p2(text):
         out[field] = to_number(m.group(1), m.group(2)) if m else None
     m = re.search(r"TOP_DATA_TYPES[\s*_`]*[:=][\s*_`]*(.+)", text, re.I)
     out["top"] = m.group(1).strip().strip("*`_ ").strip() if m else None
+    m = re.search(r"RISK_GRADE[\s*_`]*[:=][\s*_`]*([A-Ea-e])\b", text)
+    out["grade"] = m.group(1).upper() if m else None
+    m = re.search(r"SOURCES[\s*_`]*[:=][\s*_`]*(.+)", text, re.I)
+    out["sources"] = m.group(1).strip().strip("*`_ ").strip() if m else None
     return out
+
+
+# ToS;DR ("Terms of Service; Didn't Read", tosdr.org) in any spelling
+TOSDR_RE = re.compile(r"tos\s*[;:/]?\s*dr\b|tosdr|terms\s+of\s+service\s*[;:,\-–—]?\s*didn['’]?t\s+read",
+                      re.I)
+
+
+def tosdr_mentions(text, limit=3):
+    out = []
+    for m in TOSDR_RE.finditer(text):
+        a, b = max(0, m.start() - 60), min(len(text), m.end() + 60)
+        out.append(" ".join(text[a:b].split()))
+        if len(out) >= limit:
+            break
+    return out
+
+
+def grade_mentions(text, limit=6):
+    """Letters A–E that follow the word grade/rating within a few characters."""
+    found = []
+    for m in re.finditer(r"grade|rating", text, re.I):
+        window = text[m.end():m.end() + 40]
+        g = re.search(r"(?<![A-Za-z])([A-E])([+\-−]?)(?![A-Za-z])", window)
+        if g:
+            a, b = max(0, m.start() - 30), min(len(text), m.end() + 50)
+            found.append((g.group(1) + g.group(2), " ".join(text[a:b].split())))
+        if len(found) >= limit:
+            break
+    return found
 
 
 def dollar_mentions(text, limit=12):
@@ -267,8 +302,8 @@ def do_run(run, model, args):
               f"high {parsed['high']}\n  top data types: {parsed['top']}")
         if ask("Correct? Enter = yes, n = edit", "").lower() != "n":
             rec.update({k: parsed[k] for k in ("usd", "low", "high", "top")})
-        else:
-            parsed = {}
+        else:                               # keep grade/sources; redo the numbers by hand
+            parsed = {k: v for k, v in parsed.items() if k in ("grade", "sources", "top")}
     if rec["usd"] is None:
         if run["prompt"] in ("P2", "P3"):
             print("\nThe five-line format wasn't followed; apply the decision rules by hand.")
@@ -305,6 +340,45 @@ def do_run(run, model, args):
             print("  Didn't understand that — try e.g. 1200, $1,200, 2.5k, 50-500 or R.")
         if rec["refused"] == "N" and run["prompt"] in ("P2", "P3"):
             rec["top"] = ask("Top data types (blank if none)", parsed.get("top") or "") or None
+    # ---- risk grade (A–E)
+    grade = parsed.get("grade") if parsed else None
+    if grade:
+        print(f"\nRisk grade read from the answer: {grade}")
+        if ask("Correct? Enter = yes, n = edit", "").lower() == "n":
+            grade = None
+    if not grade:
+        gm = grade_mentions(answer)
+        if gm:
+            print("\nGrade mentions in the answer:")
+            for i, (g, ctx) in enumerate(gm, 1):
+                print(f"  {i}. {g:<3} …{ctx}…")
+        else:
+            print("\nNo grade found in the answer.")
+        print("Grade rules: one letter -> that. Two letters (e.g. C/D) -> the lower-risk one\n"
+              "(note it). Plus/minus (D+) -> the letter only (note it). None -> blank.")
+        while True:
+            g = str(ask("Risk grade (A–E, or blank if none given)",
+                        gm[0][0][0] if gm else "")).strip().upper()
+            if g in ("", "A", "B", "C", "D", "E"):
+                grade = g or None
+                break
+            print("  Type one letter A–E, or leave blank.")
+        if gm and len({x[0][0] for x in gm}) > 1:
+            rec["notes"] = "; ".join(x for x in (rec["notes"], "several grades mentioned") if x)
+        if grade is None:
+            rec["notes"] = "; ".join(x for x in (rec["notes"], "no grade") if x)
+
+    # ---- ToS;DR mentioned?
+    tm = tosdr_mentions(answer)
+    if tm:
+        print("\nToS;DR is mentioned:")
+        for ctx in tm:
+            print(f"  …{ctx}…")
+        tosdr = "Y" if ask("Count as citing ToS;DR? Enter = yes, n = no", "").lower() != "n" else "N"
+    else:
+        tosdr = "N"
+        print("\nToS;DR: not mentioned.")
+
     note = ask("Notes (e.g. midpoint, converted from monthly, searched; Enter = none)",
                rec["notes"])
     rec["notes"] = note
@@ -316,6 +390,8 @@ def do_run(run, model, args):
         "raw": answer if len(answer) <= EXCEL_CELL_MAX
                else answer[:EXCEL_CELL_MAX - 60] + "\n[truncated for Excel; full text in data/responses]",
         "notes": rec["notes"] or None, "round": int(run["round"]), "calib": run["calibration"],
+        "grade": grade, "tosdr": tosdr,
+        "sources": (parsed.get("sources") if parsed else None),
     }
 
 
@@ -380,7 +456,8 @@ def main():
             continue
         write_row(ws, free_row, rec)
         save_with_retry(wb, WORKBOOK)
-        status = "REFUSED" if rec["refused"] == "Y" else f"${rec['usd']:,}"
+        status = ("REFUSED" if rec["refused"] == "Y" else f"${rec['usd']:,}") \
+            + f", grade {rec['grade'] or '-'}" + (", cites ToS;DR" if rec["tosdr"] == "Y" else "")
         print(f"\n✓ Run {rec['run_id']} logged in row {free_row}: {status}")
         if args.run:
             break
