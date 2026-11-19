@@ -115,8 +115,8 @@ for whether the LLM cites ToS;DR. Both prompts now ask for a grade; P2 also has 
 - [x] `make_runs.py --order interleaved` (default); `log_run.py` grade + ToS;DR;
       `analyze.py` grades.csv, ToS;DR rate, recall check, grade-vs-dollar check
 - [x] METHODOLOGY, NEXT_STEPS, write-up restructured (pilot kept as its own subsection)
-- [ ] Profile values (team defaults or rounded survey mean; survey has only 5
-      responses, so not the median) → `python make_runs.py` → 62 of 62
+- [x] Profile = survey means (income $19,000, savings $21,000, Good → $1,000 credit);
+      `make_runs.py` → 62 of 62
 - [ ] 62 v2.0 runs
 - [ ] Audit rows against responses, analysis, write-up, LaTeX, clean handoff workbook
 - [ ] Slides: user is adding the team's current deck to the repo

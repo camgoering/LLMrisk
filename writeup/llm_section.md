@@ -56,7 +56,8 @@ The contrast tests whether the number a user receives depends on how carefully t
 question is asked.
 
 **Profiles.** P2 used a single profile matching the inputs of our own calculation
-([values and sources]). No individual participant's data was ever sent to the model
+(group means of our survey responses: income $19,000, savings $21,000, credit
+tier Good, and $1,000 available credit from our credit-band table). No individual participant's data was ever sent to the model
 (see Ethics).
 
 **Procedure.** Every run used a new chat, so no earlier answer could influence a
@@ -302,9 +303,8 @@ class project, and limits that would remain with more resources.*
 ## Ethics
 
 We deliberately sent no individual participant's data to the model. Every P2 run
-used one group-level profile ([US-average defaults / rounded survey means]); with
-only five survey responses a median would have been one person's actual answer, so
-we did not use it. Our survey promises anonymity, and transmitting
+used one group-level profile built from survey means, never an individual
+respondent's answers. Our survey promises anonymity, and transmitting
 participants' income, savings or credit details to a third-party AI service would
 have broken that promise. This points to a limitation of the approach itself, not
 just our study: a real user who wanted a personalised estimate would have to

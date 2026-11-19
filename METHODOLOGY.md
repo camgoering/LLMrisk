@@ -73,6 +73,11 @@ P2 uses one profile (`US_AVG` row of the `Profiles` sheet): income, credit tier,
 available credit, savings, each with its source in column F. The values must be the
 same ones the team's own calculation uses, or the comparison does not hold.
 
+**Values used (v2.0):** group means of the team survey responses: income
+$19,000 (mean yearly income, including $0 answers), savings $21,000, credit tier
+Good (mean of answered credit scores, 694; FICO Good = 670–739), available credit
+$1,000 (team's band table for Good). The team's calculation uses the same inputs.
+
 **No individual participant data is ever sent to the model.** The survey promises
 anonymity, and transmitting a participant's financial details to a third-party
 service would break that promise. If profile values are derived from the survey,
