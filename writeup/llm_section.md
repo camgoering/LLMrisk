@@ -112,9 +112,13 @@ findings below hold up with the grade question added.]
 
 ### Pilot: P1 without the grade question (v1.0, 2026-11-12)
 
-*Kept because it shows what the naive question alone produces, and because
-comparing it with v2.0 P1 shows whether adding the grade question changed the
-dollar figures. Never pooled with v2.0. Trim heavily for the paper.*
+*Kept because it shows what the naive question alone produces. Never pooled with
+v2.0. Note: 22 of 31 pilot answers contain ChatGPT web-search traces (links tagged
+utm_source=chatgpt.com, cited Federal Reserve/BJS/FTC figures), so web search was
+on for the pilot despite the protocol; the 13 "cites an external statistic" counts
+below come from that. Pilot vs v2.0 differences therefore reflect both the grade
+question and search, and can't be attributed to either. No v2.0 answer shows any
+sign of search. Trim heavily for the paper.*
 
 
 **Table [P].** Pilot: annual risk estimates under P1 v1.0 (naive prompt), 2026-11-12, five
@@ -223,8 +227,8 @@ don't.]
 **Grade vs dollar figure.** [Run-level Spearman between grade and dollar figure,
 per prompt. Do higher grades come with higher dollar estimates?]
 
-**Pilot vs v2.0.** [Did adding the grade question change P1's dollar figures?
-Compare pilot P1 and v2.0 P1 means per service.]
+**Pilot vs v2.0.** [Pilot P1 differs from v2.0 P1 in two ways (no grade question;
+web search on), so report the difference descriptively only.]
 
 ---
 

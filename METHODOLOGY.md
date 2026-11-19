@@ -99,6 +99,9 @@ prompt conditions, five repeats:
 | Netflix | D | low-mid |
 | LinkedIn | C | lowest in our exposure scoring |
 
+**Pilot deviation:** 22 of 31 pilot answers contain web-search traces, so search
+was on for the pilot. No v2.0 answer shows any sign of search.
+
 **Prompt version.** Main collection uses prompts v2.0 (`prompts/PROMPTS.md`), which
 add an A–E risk grade to both prompts and a sources line to P2. A complete P1 run
 under v1.0 (no grade question; 2026-11-12) is kept as a **pilot** in

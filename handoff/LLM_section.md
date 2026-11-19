@@ -77,9 +77,11 @@ the ranking of services (P1 vs P2 ρ = 0.60).
 **Agreement with our model:** Spearman ρ between the LLM's P2 ranking and our
 calculated ranking = [ρ] (from the Comparison sheet).
 
-**Pilot.** An earlier P1 run without the grade question (2026-11-12) gave higher
-figures for some services (Google $100, ChatGPT $42), so even adding one sentence
-to the prompt moved the dollar estimates.
+**Pilot.** An earlier P1 run (2026-11-12) gave higher figures for some services
+(Google $100, ChatGPT $42). That run had no grade question, and its answers show
+ChatGPT had searched the web (22 of 31 included web links), so the difference
+can't be attributed to either change alone. No main-run answer showed any sign of
+web search.
 
 ## Discussion
 
