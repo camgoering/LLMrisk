@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 2  
+LOW_USD: 0  
+HIGH_USD: 20  
+RISK_GRADE: B  
+TOP_DATA_TYPES: Account credentials, payment information, email content Pasted text  
+SOURCES: none  
+ONE_SENTENCE_BASIS: The $2 estimate assumes a 0.2% annual chance of fraud enabled by data Google collects and a $1,000 average unreimbursed loss if it occurs; the policy describes safeguards but provides no incident or loss rates, so the figures are illustrative scenario estimates, not measured risks or a maximum possible loss. Pasted text

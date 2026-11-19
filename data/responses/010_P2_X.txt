@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 2
+LOW_USD: 0
+HIGH_USD: 20
+RISK_GRADE: B
+TOP_DATA_TYPES: Login credentials, contact and birth-date information, payment card details for paid services
+SOURCES: none
+ONE_SENTENCE_BASIS: The policy identifies data that could enable fraud but provides no X-specific incident or loss rates, so the $2 estimate uses an illustrative 0.2% annual chance of $1,000 in unreimbursed loss, with $0–$20 representing alternative expected-cost scenarios rather than a confidence interval or a cap on actual loss. Pasted text

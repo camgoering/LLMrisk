@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 5
+LOW_USD: 0
+HIGH_USD: 30
+RISK_GRADE: B
+TOP_DATA_TYPES: Email address or mobile number, account password, professional profile information
+SOURCES: none
+ONE_SENTENCE_BASIS: The disclosed account and profile data can enable targeted phishing or account takeover, but the policy does not quantify either the likelihood or the loss, so the B grade is qualitative and the dollar figures are illustrative scenarios, with the central estimate assuming a 0.5% annual chance of a $1,000 net loss and the high estimate assuming a 1% chance of a $3,000 net loss. Pasted text Pasted text Pasted text

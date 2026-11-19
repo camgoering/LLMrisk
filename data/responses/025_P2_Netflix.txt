@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 1
+LOW_USD: 0.05
+HIGH_USD: 10
+RISK_GRADE: B
+TOP_DATA_TYPES: Payment card details, login credentials, contact information
+SOURCES: none
+ONE_SENTENCE_BASIS: The policy identifies data that could enable fraud but provides no service-specific incident or loss rates, so the low-risk grade and dollar estimates are illustrative: the central scenario assumes a 0.2% annual chance of fraud attributable to Netflix data and a $500 average unreimbursed loss if it occurs. Pasted text

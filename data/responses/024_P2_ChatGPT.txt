@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 1
+LOW_USD: 0
+HIGH_USD: 10
+RISK_GRADE: C
+TOP_DATA_TYPES: Account credentials, payment information, identity verification information
+SOURCES: none
+ONE_SENTENCE_BASIS: The policy describes collection of fraud-relevant data but provides no incident rates or loss figures, so the $1 estimate assumes a 0.1% annual chance of service-enabled fraud and $1,000 in unreimbursed losses if it occurs; the $0–$10 range and C grade are illustrative judgments, not measured bounds or a validated rating. Pasted text Pasted text Pasted text

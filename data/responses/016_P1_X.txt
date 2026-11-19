@@ -1,0 +1,5 @@
+**Privacy-risk grade: D (high). Dollar figure: $50 per year as a personal decision benchmark, not a prediction of financial loss.** For casual use, I’d ask whether access to X is worth $50 a year to you given the privacy trade-off. The policy doesn’t provide the likelihood or cost of incidents like fraud or account compromise, so it can’t support a reliable estimate of what you’ll actually lose.
+
+The D reflects the breadth of data collection and what can happen to that data. X says it collects device identifiers, approximate location, and the contents of Direct Messages, while separately listing metadata for Encrypted Messages. It may use collected information to train AI models, and in some cases third-party collaborators may use shared data for their own AI training unless you opt out. Public posts can also remain available elsewhere after you delete them from X. Pasted text Pasted text Pasted text Pasted text Pasted text
+
+If you accept, I’d opt out of partner sharing where available and avoid putting sensitive information in ordinary DMs or public posts. The policy explicitly says the business-partner setting doesn’t stop all sharing. Pasted text

@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 5  
+LOW_USD: 0  
+HIGH_USD: 50  
+RISK_GRADE: B  
+TOP_DATA_TYPES: Account credentials, optional payment information, email content Pasted text  
+SOURCES: none  
+ONE_SENTENCE_BASIS: The B grade reflects sensitive data collection alongside safeguards such as two-step verification, and the $5 estimate assumes a 0.5% annual chance of fraud enabled by this data and $1,000 in average unreimbursed loss if it occurs, with $0–$50 representing illustrative scenarios rather than a measured range or a cap on individual losses. Pasted text Pasted text
