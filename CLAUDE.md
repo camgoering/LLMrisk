@@ -117,8 +117,10 @@ for whether the LLM cites ToS;DR. Both prompts now ask for a grade; P2 also has 
 - [x] METHODOLOGY, NEXT_STEPS, write-up restructured (pilot kept as its own subsection)
 - [x] Profile = survey means (income $19,000, savings $21,000, Good → $1,000 credit);
       `make_runs.py` → 62 of 62
-- [ ] 62 v2.0 runs
-- [ ] Audit rows against responses, analysis, write-up, LaTeX, clean handoff workbook
+- [x] 62 v2.0 runs (2026-11-18); audited, runs 17/29/54 corrected
+- [x] Handoff for group repo: `handoff/LLM_results.xlsx` (built by `make_handoff.py`)
+      + `handoff/LLM_section.md` (concise report section)
+- [ ] Team's six $/yr figures → handoff Comparison sheet column D → fill [ρ] in section
 - [ ] Slides: user is adding the team's current deck to the repo
 
 ## 6. Files
