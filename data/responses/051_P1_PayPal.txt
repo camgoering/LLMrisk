@@ -1,0 +1,5 @@
+**Risk grade: D (high privacy exposure). Annual dollar risk: not quantifiable from the policy.** The statement describes what PayPal can collect, share, and retain, but it doesn’t provide the likelihood of an incident or what you’d lose out of pocket. A specific annual loss figure would be guesswork; that doesn’t mean the risk is $0.   
+
+I’d give it a **D rather than a C** because PayPal can collect sensitive information such as Social Security and bank account numbers, retain information used for the account relationship for 10 years after it ends (subject to exceptions), and use automated risk decisions to restrict or stop services. I wouldn’t give it an **E** because the policy describes safeguards such as encryption and access controls, and it lets you opt out of sharing with merchants for personalized shopping. This is a grade for **privacy exposure**, not a prediction that you’ll lose money.   Pasted text 
+
+If you use PayPal, the first change I’d make is to turn off **personalized shopping sharing** under **Data and Privacy**. That limits an optional use without stopping the sharing needed to complete payments you initiate. Pasted text

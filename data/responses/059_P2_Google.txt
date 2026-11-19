@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 2
+LOW_USD: 0
+HIGH_USD: 25
+RISK_GRADE: B
+TOP_DATA_TYPES: Account credentials, Email contents, Optional payment information 
+SOURCES: none
+ONE_SENTENCE_BASIS: The $2 estimate assumes a 0.2% annual chance of fraud enabled by Google-collected data and a $1,000 average unreimbursed loss if it occurs; the range and low-risk B grade are judgment calls reflecting sensitive data collection and stated safeguards, not measured probabilities or statistical bounds.  Pasted text

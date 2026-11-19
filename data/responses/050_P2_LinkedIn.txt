@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 5
+LOW_USD: 0
+HIGH_USD: 30
+RISK_GRADE: B
+TOP_DATA_TYPES: account credentials, contact information, professional profile information
+SOURCES: none
+ONE_SENTENCE_BASIS: LinkedIn collects data that could enable targeted phishing or account takeover, but the policy provides no service-specific fraud rate or loss data, so the $5 estimate uses an illustrative 0.5% annual chance of a $1,000 unreimbursed loss, with low and high scenarios rather than statistical bounds. Pasted text

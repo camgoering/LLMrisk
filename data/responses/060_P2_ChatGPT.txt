@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 1
+LOW_USD: 0
+HIGH_USD: 10
+RISK_GRADE: B
+TOP_DATA_TYPES: Account credentials, payment information, identity verification information
+SOURCES: none
+ONE_SENTENCE_BASIS: The B grade is provisional, and the $1 estimate uses an illustrative 0.1% annual chance of fraud attributable to the service’s data and a $1,000 average unreimbursed loss if it occurs, with $0–$10 representing alternative expected-loss scenarios rather than a confidence interval because the policy describes sensitive data collection and safeguards but provides no service-specific fraud rates or loss figures.   Pasted text

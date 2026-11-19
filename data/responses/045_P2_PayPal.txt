@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 2  
+LOW_USD: 0  
+HIGH_USD: 20  
+RISK_GRADE: C  
+TOP_DATA_TYPES: Social Security numbers, bank account and routing numbers, payment card details  
+SOURCES: none  
+ONE_SENTENCE_BASIS: The policy describes sensitive data collection, third-party sharing, long retention, and security controls but gives no PayPal-specific fraud rate, so the $2 estimate assumes a 0.2% annual chance of fraud enabled by PayPal-held or shared data and a $1,000 average unreimbursed loss if it occurs; the bounds are illustrative scenarios, not a confidence interval.    Pasted text

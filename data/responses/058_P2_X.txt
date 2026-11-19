@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 1
+LOW_USD: 0
+HIGH_USD: 20
+RISK_GRADE: C
+TOP_DATA_TYPES: account passwords, email addresses or phone numbers, payment card details (paid services only)
+SOURCES: none
+ONE_SENTENCE_BASIS: C reflects the sensitivity of the data collected, while the $1 estimate is an illustrative scenario (0.2% annual chance of X-enabled fraud × $500 in unreimbursed loss), with $0–$20 as scenario bounds rather than a confidence interval because the policy establishes neither the probability nor the loss. Pasted text

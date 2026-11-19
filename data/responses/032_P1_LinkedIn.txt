@@ -1,0 +1,5 @@
+**Privacy risk: D on an A–E scale. Annual dollar figure: $50 as a personal decision benchmark, not a predicted loss.** I’d use $50 as the amount I’d be willing to pay each year for an otherwise equivalent service with less tracking and data reuse. The policy doesn’t give incident rates or loss amounts, so it can’t support an estimate of what accepting it will actually cost you.
+
+The **D** reflects what LinkedIn says it can do during ordinary use, even if there’s never a breach: track activity on and off LinkedIn for advertising, infer details such as your compensation bracket, use personal data to train AI models, and share some personal data with affiliates including Microsoft for advertising services.   
+
+I wouldn’t grade it **E** because the policy describes meaningful controls: ad opt-outs, visibility settings, and ways to request access or deletion. But closing your account doesn’t necessarily remove information you’ve already shared or that others have copied. If LinkedIn is worth keeping for your career, I’d start by limiting public profile visibility, opting out of off-site ad targeting, and leaving calendar sync off unless you need it.     Pasted text

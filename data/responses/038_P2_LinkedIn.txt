@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 5  
+LOW_USD: 1  
+HIGH_USD: 30  
+RISK_GRADE: B  
+TOP_DATA_TYPES: Email address or mobile number, Account password, Professional profile and employment history  
+SOURCES: none  
+ONE_SENTENCE_BASIS: LinkedIn’s collection of contact details and passwords and the visibility of professional profiles create phishing and account-takeover risk, but the policy does not quantify LinkedIn-attributable fraud, so $5 is an illustrative 12-month expected loss based on an assumed 0.5% chance of a $1,000 net loss, with low and high scenarios rather than statistical bounds.   Pasted text

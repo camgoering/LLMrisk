@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 1
+LOW_USD: 0
+HIGH_USD: 10
+RISK_GRADE: B
+TOP_DATA_TYPES: Account credentials, payment information, identity verification information Pasted text
+SOURCES: none
+ONE_SENTENCE_BASIS: The low but nonzero grade and illustrative expected loss of $1 use an assumed 0.1% annual chance of service-enabled fraud and $1,000 in average unreimbursed loss if it occurs; the policy provides neither figure, so the $0–$10 range is a scenario range, not a statistical confidence interval.
