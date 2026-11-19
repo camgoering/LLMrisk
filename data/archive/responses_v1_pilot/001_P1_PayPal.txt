@@ -1,0 +1,30 @@
+## What accepting PayPal's privacy policy could cost you per year
+
+My estimate: $0 in direct annual fees, with an unquantifiable risk of indirect financial losses.
+
+Based on the October 12, 2026 PayPal Privacy Statement you provided, accepting the policy does not itself establish a yearly charge. The financial risk instead comes from how PayPal collects, uses, shares, and retains your personal and financial information.
+
+The policy allows PayPal to:
+
+- Collect sensitive financial information, transaction history, and purchasing behavior.
+- Share certain information with merchants, marketing partners, affiliates, and service providers.
+- Use personal information to train AI models and make automated risk and creditworthiness decisions.
+- Retain some information for 10 years after your relationship ends, potentially longer in certain circumstances.
+
+These practices create privacy and potential financial risks, but the document provides no data that would support a reliable dollar estimate of your expected annual loss.
+
+## My practical recommendation
+
+If you want a single number for budgeting purposes, I would use $0 per year in known direct costs and treat the potential privacy-related losses as an unpriced risk—not as a predictable annual expense.
+
+The biggest concern isn't that PayPal will automatically take money from you. It's that broader data sharing increases your exposure to unwanted profiling, personalized marketing, and possible downstream misuse of information.
+
+To reduce that exposure while keeping PayPal:
+
+1. Open Settings → Data and Privacy.
+2. Opt out of personalized shopping data sharing.
+3. Limit information sharing with nonaffiliates for marketing.
+4. Avoid linking unnecessary financial or social accounts.
+5. Enable two-factor authentication and transaction alerts.
+
+Bottom line: I would not reject PayPal solely because of this privacy policy, but I would disable optional data sharing. The policy does not justify claiming that accepting it will cost you $25, $100, or any other specific amount each year.

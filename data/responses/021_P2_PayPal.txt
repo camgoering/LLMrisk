@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 2  
+LOW_USD: 0  
+HIGH_USD: 20  
+RISK_GRADE: C  
+TOP_DATA_TYPES: Social Security and tax ID numbers, bank account and routing numbers, credit and debit card details Pasted text  
+SOURCES: none  
+ONE_SENTENCE_BASIS: The $2 estimate assumes a 0.2% annual chance of fraud enabled by data PayPal collects and $1,000 in average unreimbursed loss if it occurs; the $0–$20 range is illustrative and the C grade reflects sensitive data collection and sharing despite stated safeguards, not a measured fraud rate. Pasted text Pasted text

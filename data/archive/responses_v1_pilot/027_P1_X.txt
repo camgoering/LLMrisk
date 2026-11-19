@@ -1,0 +1,54 @@
+## What is the yearly financial risk of accepting X's Privacy Policy?
+
+My estimated planning figure is $25 per year for an average, casual X user, with a plausible illustrative range of $5–$100 annually.
+
+However, this is not a measured actuarial estimate. The privacy policy does not provide enough information to calculate an actual dollar risk, and there is no reliable way to establish that $25 is the true expected loss.
+
+The important distinction is that accepting the policy does not automatically cost you money. The financial exposure comes from how your personal information could be collected, shared, misused, or compromised.
+
+The January 15, 2026 policy you provided permits several practices that create potential financial and privacy risks.
+
+## Where the financial risks come from
+
+| Privacy policy provision                                                        | Potential financial consequence                     |
+| ------------------------------------------------------------------------------- | --------------------------------------------------- |
+| Collection of browsing, location and device information (§1.2)                  | More extensive profiling and targeted advertising   |
+| Combining data from advertising partners (§1.3)                                 | More sophisticated behavioral targeting             |
+| AI training using collected information (§2.1)                                  | Potential loss of control over personal information |
+| Sharing with third parties for their own purposes, including AI training (§3.2) | Information may be used beyond X's own services     |
+| Retaining account and activity data (§4)                                        | Ongoing exposure if information is compromised      |
+
+The most concerning provision is §3.2, Third-party collaborators. It allows some recipients to use shared information for independent purposes, including training AI models, unless you opt out where that choice applies.
+
+## How I arrive at $25 per year
+
+Here's an illustrative expected-loss calculation, not a statistically validated prediction.
+
+| Hypothetical outcome                       | Assumed annual probability | Assumed loss | Annualized risk |
+| ------------------------------------------ | -------------------------- | ------------ | --------------- |
+| Privacy-related fraud                      | 1%                         | $1,000       | $10             |
+| Financial effects of targeted manipulation | 5%                         | $200         | $10             |
+| Other privacy-related costs                | 10%                        | $50          | $5              |
+| Total                                      |                            |              | $25             |
+
+These probabilities are assumptions, not measured X-specific rates. They also do not establish that accepting this policy causes these outcomes.
+
+For context, the Federal Reserve estimated that U.S. consumers bore $56 billion in net losses from non-credit-card fraud in 2025, but that figure covers fraud broadly, not losses attributable to X.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.federalreserve.gov\&sz=32)
+
+Banking
+
+
+
+## My recommendation
+
+If you're only using X to read public posts, I would treat the incremental financial risk of accepting this policy as relatively low, though not zero.
+
+If you're actively posting personal information, sending sensitive messages, connecting other accounts, or using payment features, your potential exposure is greater.
+
+To reduce it, disable optional data sharing, personalized advertising where available, precise location, contact syncing, and third-party AI data sharing. Avoid posting sensitive financial details.
+
+Bottom line: If you need one number for a personal cost-benefit decision, $25 per year is a hypothetical budgeting allowance, not a defensible estimate of the actual financial risk. The genuine risk could be near zero in a given year, while an unusually serious incident could cost thousands.
+
+The policy alone cannot establish a more reliable yearly dollar figure.

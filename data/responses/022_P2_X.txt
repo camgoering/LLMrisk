@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 2
+LOW_USD: 0
+HIGH_USD: 20
+RISK_GRADE: C
+TOP_DATA_TYPES: email address or phone number, date of birth, payment card details for paid services
+SOURCES: none
+ONE_SENTENCE_BASIS: The $2 figure is an illustrative estimate (an assumed 0.2% annual chance of X-enabled fraud times $1,000 in unreimbursed loss if it occurs), the low and high figures are scenario estimates rather than statistical bounds, and the C grade reflects the sensitivity of the data collected because the policy does not establish either the likelihood or the likely loss. Pasted text

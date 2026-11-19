@@ -1,0 +1,55 @@
+Based on Google's Privacy Policy effective October 16, 2026, I would use $100 per year as a hypothetical dollar value for the privacy risk of accepting it, assuming you're an average U.S. consumer who regularly uses Google Search, Gmail, YouTube, Chrome, and Maps.
+
+That is not an empirically established expected loss. It's a rough planning figure, intended to capture the potential financial downside of data collection, targeted advertising, and exposure of personal information.
+
+There's no annual charge for accepting the policy itself, and the document does not provide enough information to calculate your actual expected financial loss.
+
+## Estimated annual financial exposure
+
+Here is an illustrative breakdown, rather than a statistically validated forecast:
+
+| Risk category                                                           | Illustrative annual cost |
+| ----------------------------------------------------------------------- | ------------------------ |
+| Additional spending influenced by personalized advertising              | $40                      |
+| Privacy loss from tracking and profiling                                | $25                      |
+| Expected financial impact of data breaches or identity misuse           | $20                      |
+| Time spent managing privacy, unwanted communications, or account issues | $15                      |
+| Total hypothetical annual cost                                          | $100                     |
+
+These figures are assumptions, not amounts established by Google's policy or measured probabilities.
+
+## What in the policy creates that risk?
+
+The most financially relevant provisions are:
+
+- Extensive activity tracking: Google can collect searches, purchases, browsing activity, interactions, and location information.
+- Personalized advertising: Google can use your activity to influence the products and services advertised to you.
+- Cross-service information use: Depending on your settings, information from multiple Google products can be combined.
+- Third-party processing and disclosures: Information can be processed by service providers and disclosed in certain legal circumstances.
+- Long-term retention: Some information remains stored until you delete it, and some may be retained longer for security or legal reasons.
+
+Importantly, the policy also states that Google does not sell personal information, provides privacy controls, and uses security protections. Those provisions reduce some risks.
+
+## Is $100 per year reasonable?
+
+As a personal valuation, it's plausible, but it isn't independently verified. For perspective, a December 2025 consumer privacy survey found that 25% of respondents preferred paying $5 per month ($60 annually) for a more privacy-protective email service, while 47% preferred a free, data-supported option. That provides context for how some consumers value privacy, not evidence of Google's financial risk.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.siia.net\&sz=32)
+
+siia.net
+
+
+
+There's also an important distinction: the relevant financial risk is the additional exposure caused by accepting this policy compared with your realistic alternative, not every privacy or fraud risk you already face online.
+
+## My conclusion
+
+Illustrative annual privacy-risk valuation
+
+# $100/year
+
+Not a measured expected loss or guaranteed cost
+
+I would not use $100 as an actuarial estimate, a legal damages figure, or an amount Google owes you. For that, we would need evidence about incident probabilities, actual losses, and how much of the risk is attributable specifically to this policy.
+
+If your question is whether accepting Google's privacy policy is financially dangerous, my assessment is that the routine direct financial risk is likely modest for many users, but the potential downside of a serious privacy or account-security incident can be much larger.

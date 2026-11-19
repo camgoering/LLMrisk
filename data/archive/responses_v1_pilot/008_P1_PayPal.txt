@@ -1,0 +1,83 @@
+## What is the yearly financial risk of accepting PayPal's privacy policy?
+
+My estimate: $10–$50 per year in potential privacy-related economic costs for a typical U.S. consumer, using a hypothetical risk model—not a measured or statistically validated estimate.
+
+The most important distinction is that accepting PayPal's privacy policy does not automatically cost you money. The financial exposure comes from potential misuse of personal information, increased marketing influence, identity theft, fraud, and the consequences of automated financial decisions.
+
+The policy you provided, updated October 12, 2026, gives PayPal permission to collect and process extensive financial, behavioral, and identity information. Some of that information can also be disclosed to other companies.
+
+There is no reliable way to calculate your actual annual dollar risk from the policy alone. But we can put dollar amounts on illustrative scenarios to make the trade-offs easier to evaluate.
+
+## Illustrative annual risk breakdown
+
+These amounts are modeling assumptions, not independently measured PayPal-specific losses.
+
+| Potential risk                                        | Illustrative annual cost |
+| ----------------------------------------------------- | ------------------------ |
+| Additional purchases influenced by targeted marketing | $5–$20                   |
+| Exposure to fraud or identity-theft losses            | $2–$15                   |
+| Time spent addressing privacy or account issues       | $1–$10                   |
+| Financial consequences of automated profiling         | $0–$5                    |
+| Illustrative total                                    | $8–$50                   |
+
+The FTC reported $12.5 billion in consumer fraud losses in 2024, but those losses cannot be directly attributed to PayPal's privacy practices.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.ftc.gov\&sz=32)
+
+Federal Trade Commission
+
+
+
+## What concerns me most in this policy
+
+Four provisions stand out:
+
+1. Financial profiling: PayPal may infer your income, creditworthiness, purchasing habits, and financial behavior.
+2. Sharing with merchants: PayPal may disclose shopping preferences and inferred interests to merchants for personalized offers.
+3. AI training: Your personal information may be used to train AI models powering PayPal's services.
+4. Long retention: PayPal generally retains relationship-related personal information throughout your relationship and for another 10 years, subject to exceptions.
+
+The financial cost of these practices is uncertain, but they create privacy exposure beyond ordinary payment processing.
+
+## Calculate your own illustrative risk
+
+HYPOTHETICAL ANNUAL EXPECTED COST
+
+# $25.00
+
+Assumed annual chance of an incremental loss
+
+1%
+
+Illustrative probability attributable specifically to accepting this policy, not a known fraud rate.
+
+Financial loss if that event occurs
+
+$500
+
+$1,000
+
+$5,000
+
+Assumed annual marketing influence
+
+$15
+
+Formula
+
+Expected annual cost = probability × loss if it happens + marketing-related spending.
+
+## How to reduce your exposure
+
+You can accept the policy while limiting certain data uses. The document explicitly provides these options:
+
+- Go to PayPal → Settings → Data & Privacy and opt out of personalized shopping data sharing.
+- Limit information shared with nonaffiliated companies for marketing.
+- Avoid linking unnecessary financial accounts and importing contacts.
+- Keep your profile private and disable optional tracking permissions.
+
+These steps do not eliminate data collection required for transactions, identity verification, or fraud prevention.
+
+Bottom line: If you need one number for personal budgeting, $25 per year is a reasonable illustrative placeholder within the scenario above. It is not an evidence-based estimate of what accepting this policy will actually cost you, nor is there evidence that PayPal's policy increases your expected losses by that amount.
+
+I would be more concerned about the scope and long-term retention of financial data than about a predictable yearly charge.

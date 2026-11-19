@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 2
+LOW_USD: 0
+HIGH_USD: 20
+RISK_GRADE: B
+TOP_DATA_TYPES: Email address or mobile number, password, employment history
+SOURCES: none
+ONE_SENTENCE_BASIS: For a standard account, a hypothetical 0.2% annual chance of LinkedIn-enabled fraud with a $1,000 average unreimbursed loss gives a $2 expected cost, but the $0–$20 range and B grade are judgment calls, not measured estimates, because the policy describes what LinkedIn collects without quantifying fraud frequency or losses. Pasted text Pasted text

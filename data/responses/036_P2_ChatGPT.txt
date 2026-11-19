@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 1
+LOW_USD: 0
+HIGH_USD: 10
+RISK_GRADE: B
+TOP_DATA_TYPES: Account credentials, payment information, identity verification information
+SOURCES: none
+ONE_SENTENCE_BASIS: The dollar figures and low-risk grade are illustrative rather than measured: the central scenario assumes a 0.1% annual chance of fraud attributable to the service and a $1,000 average out-of-pocket loss if it occurs, but the policy discloses sensitive data collection and safeguards without quantifying either input.   Pasted text

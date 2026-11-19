@@ -1,0 +1,35 @@
+Based on LinkedIn’s Privacy Policy effective November 3, 2025, I would assign a provisional financial risk estimate of $25 per year for accepting the policy as an ordinary individual user.
+
+ILLUSTRATIVE ANNUAL RISK ALLOWANCE
+
+# $25/year
+
+Not a measured loss, insurance estimate, or amount established by the policy.
+
+### What creates the risk?
+
+The policy authorizes several practices with potential financial consequences:
+
+| Privacy exposure                             | Potential financial consequence                      |
+| -------------------------------------------- | ---------------------------------------------------- |
+| Behavioral tracking and targeted advertising | Increased spending influenced by advertising         |
+| AI model training using personal data        | Loss of control over commercially useful information |
+| Sharing data with Microsoft and affiliates   | Broader exposure of your personal information        |
+| Security breaches                            | Possible fraud, identity theft, or recovery costs    |
+| Long-term data retention                     | Continued exposure of information over time          |
+
+These are potential costs, not confirmed annual losses.
+
+### Why $25?
+
+It is a modest placeholder for budgeting, not a statistically supported calculation. The policy provides neither breach probabilities nor average individual financial losses, so there is no defensible way to derive a precise annual expected loss from its text alone.
+
+Importantly, the policy does not impose a $25 annual charge. Your direct financial obligation from accepting the privacy policy itself is $0 per year, excluding any separately purchased services.
+
+### My assessment
+
+For someone using LinkedIn to network professionally, the potential career value may outweigh the privacy exposure.
+
+I would accept the policy only after disabling unnecessary advertising personalization, limiting public profile information, avoiding contact and calendar syncing, and reviewing the settings governing AI training.
+
+Bottom line: Use $25 annually as a hypothetical personal risk allowance, but recognize that your actual expected financial loss is unknown. A single serious privacy incident could cost much more, while you might never experience any measurable financial loss.

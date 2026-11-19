@@ -1,0 +1,62 @@
+## What is the annual financial risk of accepting X's privacy policy?
+
+My assessment: There is no defensible way to assign a specific annual dollar loss from this privacy policy alone. However, I can translate the risks into a financial model to help you decide whether accepting it is worth it.
+
+The policy, effective January 15, 2026, does not impose an annual privacy fee. The potential cost comes from how your personal information could be used, shared, exposed, or exploited.
+
+The most financially significant provisions are:
+
+- Third-party AI training: Section 3.2 allows certain third parties to use information for their own purposes, including AI training, depending on your settings.
+- Advertising and profiling: Sections 1.3 and 2.1 allow X to combine information from advertisers and other sources to build a more detailed picture of you.
+- Identity and location tracking: Section 1.2 permits collection of device identifiers, approximate location, usage patterns, and inferred identity.
+- Data exposure: Sections 3 and 4 describe sharing and retention practices that create potential exposure if information is mishandled or compromised.
+- Persistent public information: Section 4 warns that copies of your posts may remain available elsewhere after deletion.
+
+None of these provisions establishes how often a financial loss occurs or how much an individual user is likely to lose.
+
+## Putting a dollar amount on the risk
+
+For a concrete illustration, suppose we use the following hypothetical assumptions for the additional risk created by using X under this policy.
+
+| Risk scenario               | Assumed annual probability | Assumed loss | Expected yearly cost |
+| --------------------------- | -------------------------- | ------------ | -------------------- |
+| Privacy-related scam        | 1%                         | $500         | $5                   |
+| Identity misuse             | 0.2%                       | $2,000       | $4                   |
+| Other privacy-related costs | —                          | —            | $6                   |
+| Total                       |                            |              | $15/year             |
+
+These assumptions are illustrative, not measured X-specific risks. Actual losses could be zero or thousands of dollars.
+
+For context, the FTC reported a $497 median loss among fraud reports in 2024, and the Federal Reserve estimated $56 billion in unrecovered non-credit-card fraud losses across U.S. consumers in 2025. Neither figure establishes the probability that accepting X's policy causes fraud.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.ftc.gov\&sz=32)
+
+Federal Trade Commission+1
+
+
+
+## Calculate your own annual risk
+
+Change the assumptions to see the expected annual financial loss attributable to the policy.
+
+Annual chance of a loss
+
+1.0%
+
+Loss if it happens
+
+$1,500
+
+HYPOTHETICAL EXPECTED ANNUAL LOSS
+
+# $15.00/year
+
+Probability × financial consequence. This is a scenario calculator, not an estimate of X's actual risk.
+
+## My conclusion
+
+If you want a single number for decision-making, $15 per year is a hypothetical planning allowance, not a verified estimate of the cost of accepting X's privacy policy.
+
+The potentially larger concern is not a predictable annual payment but loss of control over personal information, particularly when it is used for third-party AI training or copied beyond X.
+
+I would accept the policy only with restrictive privacy settings, avoid sharing sensitive information, and disable optional data sharing where possible. These precautions reduce exposure, although they cannot eliminate every risk permitted by the policy.

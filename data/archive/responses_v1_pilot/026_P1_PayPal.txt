@@ -1,0 +1,84 @@
+## What is the yearly financial risk of accepting PayPal's privacy policy?
+
+My estimate: $10–$50 per year in potential privacy-related economic costs for a typical PayPal user, with a midpoint of approximately $25 annually.
+
+That is a rough, illustrative estimate—not a statistically established loss figure. PayPal's October 12, 2026 privacy policy does not provide enough information to calculate your actual annual risk in dollars.
+
+Importantly, accepting this privacy policy does not itself authorize PayPal to charge you $25 annually. The potential cost comes from how your personal information may be used, shared, compromised, or incorporated into automated decisions.
+
+The biggest concern isn't ordinary advertising. It's the combination of your financial information, purchasing behavior, identity information, and potentially sensitive personal data.
+
+## Where the financial risk comes from
+
+The following ranges are illustrative assumptions, not measured PayPal-specific losses. They show how a hypothetical $25 annual estimate might be allocated.
+
+| Privacy-related risk                                  | Illustrative annual cost |
+| ----------------------------------------------------- | ------------------------ |
+| Targeted advertising and purchasing influence         | $5–$15                   |
+| Broader sharing of financial and shopping information | $2–$5                    |
+| Identity theft or data-breach exposure                | $3–$10                   |
+| Automated decisions affecting access to services      | $0–$5                    |
+| Illustrative total                                    | $10–$35                  |
+
+These categories overlap, and the figures should not be interpreted as independently verified risks.
+
+### What concerns me most in the policy
+
+1. Financial profiling: PayPal can analyze transactions, purchasing habits, estimated income, and creditworthiness.
+2. Third-party sharing: It can disclose certain information to merchants, marketing partners, financial institutions, and service providers.
+3. AI processing: PayPal may use personal information to train AI models and make automated risk assessments.
+4. Long-term retention: Certain information may remain stored for 10 years after your relationship ends, or longer when legally justified.
+5. Consequential decisions: Automated assessments may restrict or deny access to financial services.
+
+These are permissions and potential exposures, not evidence that PayPal will cause you a financial loss.
+
+## How much could you lose in a bad year?
+
+ILLUSTRATIVE FINANCIAL EXPOSURE
+
+Routine year
+
+# $0–$50
+
+Disruptive incident
+
+# $100–$1k
+
+Severe incident
+
+# $1k+
+
+Hypothetical loss scenarios, not forecasts or validated PayPal loss distributions. Severe incidents are not necessarily likely.
+
+A data breach doesn't automatically mean financial loss, and an unauthorized transaction may be covered by applicable legal protections or PayPal's policies.
+
+## How to reduce your risk
+
+The policy provides some useful controls.
+
+- Open PayPal → Settings → Data & Privacy and opt out of personalized shopping disclosures.
+- Limit sharing with nonaffiliated companies for their marketing, where permitted.
+- Avoid importing contacts, linking unnecessary accounts, or providing optional biometric and precise location data.
+- Use strong authentication and monitor transactions.
+
+PayPal also states that it does not sell personal information or share it for certain legally defined targeted-advertising purposes under non-exempt U.S. privacy laws. That is a meaningful qualification, although other forms of permitted information sharing remain.
+
+## Bottom line
+
+I would use $25 per year as a personal budgeting placeholder, not a scientifically defensible estimate of PayPal's privacy costs. The actual expected loss could be close to zero or substantially higher depending on your activity, security practices, and circumstances.
+
+If you use PayPal occasionally, I would generally consider accepting the policy reasonable after disabling optional data sharing. If you use PayPal for substantial financial activity, the consequences of an account or identity incident deserve more attention.
+
+One question would help me make the dollar estimate more relevant:
+
+How much money do you send, receive, or spend through PayPal annually?
+
+Less than $1,000
+
+$1,000–$10,000
+
+$10,000–$50,000
+
+More than $50,000
+
+Refine my risk estimate&#x20;

@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 1  
+LOW_USD: 0  
+HIGH_USD: 10  
+RISK_GRADE: B  
+TOP_DATA_TYPES: Email address or phone number, date of birth, payment card details (paid services only)  
+SOURCES: none  
+ONE_SENTENCE_BASIS: For a standard unpaid account, $1 is an illustrative estimate using an assumed 0.2% annual chance of fraud enabled by X data and $500 in unreimbursed loss if it occurs; the policy identifies what X collects but does not establish either assumption, so the low and high figures are scenario estimates, not confidence bounds. Pasted text

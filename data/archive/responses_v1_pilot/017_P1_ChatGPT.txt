@@ -1,0 +1,58 @@
+## What is the yearly financial risk of accepting OpenAI's privacy policy?
+
+There is no reliable way to assign a specific annual dollar loss to accepting this privacy policy. However, we can estimate the potential financial exposure under different scenarios.
+
+The policy, updated September 10, 2026, allows OpenAI to collect and process information including your conversations, uploaded files, account information, usage patterns, and certain information from connected services.
+
+The greatest financial risk is not a routine annual charge. It is the possibility that sensitive information could be exposed, misused, or disclosed in ways that cause financial harm.
+
+Importantly, the policy does not say that OpenAI sells your personal data. It explicitly states that it does not sell personal data, although certain limited information may be shared with marketing partners.
+
+## Illustrative annual risk estimates
+
+These amounts are hypothetical, not measured estimates of losses caused by accepting OpenAI's policy.
+
+| Usage scenario                                         | Illustrative annual expected loss |
+| ------------------------------------------------------ | --------------------------------- |
+| Casual use, no sensitive information                   | $1–$10                            |
+| Regular use with personal information                  | $10–$50                           |
+| Frequent sharing of financial or private records       | $50–$250                          |
+| Sharing confidential business or highly sensitive data | $250–$1,000+                      |
+
+These ranges are not statistically validated. The privacy policy provides neither the probability of a financially harmful incident nor the typical loss per affected user.
+
+For perspective, the FTC reported a median loss of $497 among fraud reports in 2024, but that figure covers fraud generally, not ChatGPT-related incidents.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.ftc.gov\&sz=32)
+
+Federal Trade Commission
+
+
+
+## Calculate your own estimated annual risk
+
+A standard financial-risk calculation is:
+
+\\[ \text{Annual expected loss} = \text{Probability of loss} \times \text{Financial impact} \\]
+
+Annual probability of financial harm
+
+0.5%
+
+Financial loss if harm occurs
+
+$5,000
+
+HYPOTHETICAL ANNUAL EXPECTED LOSS
+
+# $25.00
+
+Adjust the assumptions to see how expected annual loss changes. The default 0.5% probability is illustrative, not an established OpenAI risk rate.
+
+## What I would do to reduce that risk
+
+The policy specifically offers controls for model training, chat deletion, Temporary Chats, and certain marketing uses of data. I would disable model training for private conversations, avoid entering passwords or complete financial account credentials, and use Temporary Chat for sensitive discussions.
+
+Bottom line: If you want one number for financial planning, $25 per year is an illustrative placeholder for ordinary personal use, not a defensible actuarial estimate or a documented cost of accepting this policy.
+
+A more meaningful assessment depends on what information you actually share. The risk could be negligible for general questions and substantially higher for confidential financial or business information.

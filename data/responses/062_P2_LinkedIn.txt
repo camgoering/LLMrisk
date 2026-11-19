@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 5
+LOW_USD: 0
+HIGH_USD: 25
+RISK_GRADE: B
+TOP_DATA_TYPES: Email address or mobile number, account password, professional profile data
+SOURCES: none
+ONE_SENTENCE_BASIS: For a basic account, I grade the incremental financial risk B because contact and profile data can enable targeted phishing and exposed credentials can enable account takeover; the $5 figure assumes a 0.5% annual chance of a $1,000 unreimbursed loss, and $0–$25 is an illustrative range for expected loss, not a measured interval or a cap on actual losses.   Pasted text

@@ -1,0 +1,56 @@
+Based on X's January 15, 2026 Privacy Policy, I would assign an illustrative annual privacy-risk budget of $100 per year for an average, moderately active user.
+
+That is not a documented charge, a measured financial loss, or an actuarially established estimate. The policy does not provide enough information to calculate a reliable personal dollar risk. The $100 figure is a judgment-based planning assumption.
+
+## Estimated annual financial exposure
+
+| Risk category                                                    | Illustrative annual expected loss |
+| ---------------------------------------------------------------- | --------------------------------- |
+| Data collection, profiling, and targeted advertising             | $15                               |
+| Increased exposure to scams, phishing, or identity theft         | $25                               |
+| Personal data shared with third parties, including AI developers | $20                               |
+| Reputational or employment consequences from public activity     | $25                               |
+| Time and expense managing privacy problems                       | $15                               |
+| Total                                                            | $100/year                         |
+
+These amounts are hypothetical allocations, not independently verified probabilities or industry averages. They should not be interpreted as five separate, measured costs.
+
+## What concerns me most in this policy
+
+The provisions with the greatest potential financial consequences are:
+
+1. AI training (Sections 2.1 and 3.2): X may use collected information and publicly available data to train AI models. Some third parties may also use shared information to train their own models.
+2. Cross-platform tracking (Sections 1.2 and 1.3): X can combine information about your activities on X with information received from advertisers, websites, and apps.
+3. Public information (Section 3.1): Your public posts may be copied, analyzed, or retained by outside organizations even after deletion.
+4. Retention (Section 4): Some information is retained throughout the lifetime of your account, and certain records may be retained longer for legal or security purposes.
+5. Identity inference (Section 1.2): X may associate accounts, devices, email addresses, and other identifiers to infer your identity.
+
+The policy permits these activities, but that does not establish how frequently they lead to financial loss.
+
+## How I would adjust the estimate
+
+Select your usage pattern
+
+Minimal, privacy-conscious use
+
+Average personal use
+
+Heavy or professionally identifiable use
+
+ILLUSTRATIVE ANNUAL RISK BUDGET
+
+# $100/year
+
+You regularly interact, follow accounts, post occasionally, and allow some personalization.
+
+Scenario assumptions only. These are not empirically calculated expected losses or amounts X will charge.
+
+## My conclusion
+
+Accepting this privacy policy does not itself create a $100 annual liability. The most realistic direct financial cost for many users could be $0 in a given year. The concern is the possibility of occasional, potentially much larger losses, combined with less easily quantified privacy costs.
+
+If you want one number for deciding whether continued use of X is worth it, $100 per year is a reasonable hypothetical risk allowance, provided you understand that it is subjective rather than evidence-based.
+
+I would be more concerned about the irreversible exposure of personal information and its potential use in AI training than about a predictable annual financial charge.
+
+My practical recommendation is to refuse non-essential cookies, disable optional business-partner data sharing and AI-training permissions where available, avoid sharing sensitive personal information, and use strong account security. These actions reduce exposure without necessarily requiring you to stop using X.

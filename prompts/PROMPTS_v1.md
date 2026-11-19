@@ -1,4 +1,7 @@
-# LLM Risk Estimation — Prompts
+# LLM Risk Estimation — Prompts (version 1.0, ARCHIVED)
+
+> **Superseded by version 2.0 (`PROMPTS.md`).** P1 v1.0 was run once, 2026-11-12
+> (31 runs), and is kept as a pilot in `data/archive/`. Do not run these again.
 
 **Owner:** Camden Goering · **Version:** 1.0 · **Last updated:** 2026-11-11
 

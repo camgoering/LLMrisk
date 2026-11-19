@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 5  
+LOW_USD: 0  
+HIGH_USD: 50  
+RISK_GRADE: C  
+TOP_DATA_TYPES: Account credentials, email contents, payment information  
+SOURCES: none  
+ONE_SENTENCE_BASIS: The $5 estimate assumes a 0.5% annual chance of fraud enabled by Google-held data and a $1,000 average unreimbursed loss if it occurs; the low and high figures are illustrative scenarios, not confidence bounds, and the C grade reflects sensitive data collection alongside stated safeguards, since the policy provides no measured fraud rate or loss data.  Pasted text

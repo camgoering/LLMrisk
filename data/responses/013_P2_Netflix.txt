@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 1  
+LOW_USD: 0.1  
+HIGH_USD: 10  
+RISK_GRADE: B  
+TOP_DATA_TYPES: payment details, login credentials, contact information  
+SOURCES: none  
+ONE_SENTENCE_BASIS: Netflix collects data that could enable payment fraud, account takeover, or phishing, but the policy gives no service-specific fraud rate or loss data, so the $1 estimate assumes a 0.2% annual chance of Netflix-enabled fraud and $500 in average unreimbursed loss if it occurs, with the low and high values representing illustrative scenarios rather than statistical bounds. Pasted text

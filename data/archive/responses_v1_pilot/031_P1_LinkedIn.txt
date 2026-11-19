@@ -1,0 +1,54 @@
+## LinkedIn Privacy Policy: What's your financial risk per year?
+
+My illustrative estimate of annual financial risk
+
+# $25–$100/year
+
+For an average individual using LinkedIn regularly, assuming ordinary privacy settings. This is a judgment-based estimate, not a statistically validated figure.
+
+If you want one dollar amount, I'd use $50 per year as a rough planning allowance for the potential financial downside of LinkedIn's data practices.
+
+However, the policy itself provides no dollar figures, incident probabilities, or reliable basis for calculating your personal expected loss. Your actual cost could be $0 for years, while an unusual identity theft, fraud, or employment-related incident could cost thousands.
+
+Importantly, accepting the policy doesn't create a $50 annual charge or automatically expose you to a $50 loss.
+
+## What creates the financial risk?
+
+Based on the privacy policy you provided, these are the main concerns:
+
+| Privacy policy provision                               | Potential financial consequence               |
+| ------------------------------------------------------ | --------------------------------------------- |
+| AI training using personal data (§2)                   | Loss of control over professional information |
+| Personalized advertising and tracking (§2.4)           | Profiling and potentially unwanted purchasing |
+| Data sharing with Microsoft and affiliates (§3.4)      | Wider exposure of personal information        |
+| Collection of employment and salary information (§1.1) | More convincing job-related scams             |
+| Security breaches (§5.1)                               | Identity theft, fraud, and recovery expenses  |
+| Retention and third-party copies (§4)                  | Continued exposure after account closure      |
+
+For perspective, the FTC reported a median loss of $497 among fraud reports in 2024, but this is not a LinkedIn-specific statistic.&#x20;
+
+[image](https://www.google.com/s2/favicons?domain=https://www.ftc.gov\&sz=32)
+
+Federal Trade Commission
+
+
+
+## How the $50 estimate works
+
+An illustrative calculation would be:
+
+\\[ \text{Annual expected loss} = \text{Probability of loss} \times \text{Financial impact} \\]
+
+For example, assuming a 2% yearly probability of a $2,500 loss attributable to LinkedIn-related privacy exposure:
+
+\\[ 0.02 \times \\$2,500 = \\$50/year \\]
+
+Neither the 2% probability nor the $2,500 impact is established by the policy or the available research. They simply show what assumptions would produce that estimate.
+
+## My recommendation
+
+I would accept the policy only if LinkedIn offers meaningful professional value to you, while limiting unnecessary data collection.
+
+In particular, disable optional AI-training uses where available, restrict advertising personalization, avoid syncing contacts and calendars, and limit sensitive profile information.
+
+Bottom line: Use $50 per year as an illustrative risk allowance, not a measured cost. The biggest concern isn't ordinary advertising—it's the possibility of a low-frequency, high-cost event involving your professional identity or personal information.

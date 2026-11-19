@@ -1,0 +1,13 @@
+service,prompt,n_graded,A,B,C,D,E,mean_grade_1to5,modal_grade,tosdr_grade,exact_match_rate,within_one_rate,no_grade,cites_tosdr,attempts
+ChatGPT,P1,5,0,0,5,0,0,3.00,C,C,1.00,1.00,0,0,5
+ChatGPT,P2,5,0,4,1,0,0,2.20,B,C,0.20,1.00,0,0,5
+Google,P1,5,0,0,3,2,0,3.40,C,E,0.00,0.40,0,0,5
+Google,P2,5,0,4,1,0,0,2.20,B,E,0.00,0.00,0,0,5
+LinkedIn,P1,5,0,0,0,5,0,4.00,D,C,0.00,1.00,0,0,5
+LinkedIn,P2,5,0,5,0,0,0,2.00,B,C,0.00,1.00,0,0,5
+Netflix,P1,5,0,0,5,0,0,3.00,C,D,0.00,1.00,0,0,5
+Netflix,P2,5,0,5,0,0,0,2.00,B,D,0.00,0.00,0,0,5
+PayPal,P1,5,0,0,0,5,0,4.00,D,E,0.00,1.00,0,0,5
+PayPal,P2,5,0,0,5,0,0,3.00,C,E,0.00,0.00,0,0,5
+X,P1,5,0,0,0,5,0,4.00,D,E,0.00,1.00,0,0,5
+X,P2,5,0,2,3,0,0,2.60,C,E,0.00,0.00,0,0,5

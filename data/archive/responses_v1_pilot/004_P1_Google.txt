@@ -1,0 +1,69 @@
+Based on Google's Privacy Policy effective October 16, 2026, I'd use $100 per year as a hypothetical dollar value for the privacy risk of accepting it as an average personal user.
+
+However, that is a judgment-based estimate, not a statistically established expected loss. The policy doesn't contain enough information to calculate a reliable dollar amount.
+
+Here is how I would think about the financial exposure.
+
+## Estimated annual privacy risk
+
+| Risk category                                                     | Illustrative yearly cost |
+| ----------------------------------------------------------------- | ------------------------ |
+| Personalized advertising influencing purchases                    | $40                      |
+| Loss of privacy from behavioral tracking                          | $25                      |
+| Potential exposure from data breaches or account compromise       | $20                      |
+| Profiling, location tracking, and unwanted information disclosure | $15                      |
+| Total illustrative annual cost                                    | $100                     |
+
+These numbers are assumptions to help put a dollar value on the trade-off. They are not measured losses attributable to Google or probabilities derived from the policy.
+
+## What concerns me in this specific policy
+
+Google says it may collect your searches, purchases, communications, location information, and activity on other websites using Google services. It may also combine information across products and devices.
+
+Three provisions matter financially:
+
+- Behavioral profiling: Google can use activity data to personalize advertising, potentially affecting purchasing decisions. Research supports the possibility of spending effects, but doesn't establish an annual dollar loss for Google users.&#x20;
+
+  [image](https://www.google.com/s2/favicons?domain=https://onlinelibrary.wiley.com\&sz=32)
+
+  Wiley Online Library
+
+- Sensitive information exposure: Google stores substantial personal information, so an account compromise could have expensive consequences. The probability and financial severity are not specified in this policy.
+
+- Long-term data retention: Some information remains until you delete it, and certain records may be retained longer for security, legal, or business reasons.
+
+There are important protections too. Google states that it does not sell personal information, restricts sharing of identifying information with advertisers, provides privacy controls, and uses security protections.
+
+## Adjust the estimate to your situation
+
+The following calculator uses the $100 illustrative baseline, not a validated actuarial model.
+
+How heavily do you use Google's services?
+
+Light — occasional Search or YouTube
+
+Average — Gmail, Search, Maps, YouTube
+
+Heavy — extensive Google activity and personal data storage
+
+What privacy settings do you use?
+
+Default or mostly personalized
+
+Restricted tracking and personalization
+
+Illustrative annual privacy cost
+
+# $100/year
+
+A subjective scenario estimate, not a prediction of your financial losses. The 50% reduction for restricted settings is an assumption, not a measured effect.
+
+## My conclusion
+
+If you require one number for a personal decision, use $100 per year as a provisional privacy-risk budget, but not as an objectively calculated cost of accepting Google's policy.
+
+Accepting the policy does not itself mean you will lose $100 annually. The incremental cost may be close to zero, while rare events could be far more expensive.
+
+The most practical response is to keep useful Google services while limiting unnecessary data collection through [Google Privacy Checkup](https://myaccount.google.com/privacycheckup?utm_source=chatgpt.com) and [My Ad Center](https://myadcenter.google.com/?utm_source=chatgpt.com).
+
+That can reduce some privacy exposure without requiring you to abandon your Google account.

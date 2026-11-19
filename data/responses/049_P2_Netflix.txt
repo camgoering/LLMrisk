@@ -1,0 +1,7 @@
+ANNUAL_RISK_USD: 1  
+LOW_USD: 0  
+HIGH_USD: 10  
+RISK_GRADE: B  
+TOP_DATA_TYPES: payment card details, login credentials, contact information  
+SOURCES: none  
+ONE_SENTENCE_BASIS: The B grade reflects low but nonzero financial exposure from the disclosed data, and the $1 estimate illustrates an assumed 0.2% annual chance of a $500 unreimbursed loss, with $0–$10 representing alternative scenarios rather than a confidence interval because the policy provides no service-specific fraud rates or loss data.  Pasted text
